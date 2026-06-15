@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Paguro Corp · Home · v2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="home-medium.css">
+</head>
+<body class="density-regular accent-orange" data-screen-label="01 Home">
+
+<!-- PHASE SWITCH (entre las 3 páginas medium-fi) -->
+<nav class="page-switch">
+  <a href="home-medium.html" class="is-current">Home</a>
+  <a href="sobre-medium.html">Sobre</a>
+  <a href="ecosistema-medium.html">Ecosistema</a>
+</nav>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="logo" href="#">
+      <img class="logo__mark" src="assets/paguro-isotipo.png" alt="Paguro" width="22" height="22">
+      <span class="logo__text">PAGURO<small>CORPORACIÓN PAGURO SAS</small></span>
+    </a>
+    <nav class="nav__items">
+      <a href="sobre-medium.html" data-i18n="nav-sobre">Sobre Paguro</a>
+      <a href="ecosistema-medium.html" class="is-current">Ecosistema <span class="chev">▾</span></a>
+      <a href="#metodo" data-i18n="nav-metodo">Método</a>
+      <a href="#insights" data-i18n="nav-insights">Insights / Lab</a>
+      <a href="#contacto" data-i18n="nav-contacto">Contacto</a>
+    </nav>
+    <div class="nav__controls">
+      <button class="nav-ctrl-btn" id="toggle-lang" aria-label="Cambiar idioma" title="Cambiar idioma">EN</button>
+      <span class="nav-ctrl-sep" aria-hidden="true"></span>
+      <button class="nav-ctrl-btn" id="toggle-theme" aria-label="Cambiar tema" title="Cambiar a modo claro">
+        <svg viewBox="0 0 16 16" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M8 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 8 2zm0 9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 8 11zm-7-3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1A.5.5 0 0 1 1 8zm10.5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1 0-1zM2.636 4.05a.5.5 0 0 1 .708-.708l.707.707a.5.5 0 0 1-.707.707l-.708-.707zm9.193 8.485a.5.5 0 0 1-.707-.707l.707-.707a.5.5 0 0 1 .707.707l-.707.707zM2.636 11.95a.5.5 0 0 1 0-.707l.708-.707a.5.5 0 0 1 .707.707l-.707.708a.5.5 0 0 1-.708 0zm9.193-8.485a.5.5 0 0 1 .707.707l-.707.707a.5.5 0 0 1-.707-.707l.707-.707zM8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+      </button>
+    </div>
+    <a class="btn btn--accent btn--sm" href="ecosistema-medium.html"><span data-i18n="nav-cta">Conocer marcas</span> <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============================================================
+       01 · HERO — "No improvisamos. Arquitectamos."
+       ============================================================ -->
+  <section class="sec sec--hero sec--aurora hero" id="hero">
+    <div class="canvas">
+      <div class="hero__layout">
+
+        <div class="hero__content">
+          <div class="hero__meta">
+            <span class="eyebrow"><span class="dot"></span><span data-i18n="hero-eyebrow">HOLDING · BOGOTÁ · ARQUITECTURA EMPRESARIAL ADAPTATIVA</span></span>
+          </div>
+
+          <h1 class="display">
+            <span data-i18n="hero-h1-a">No improvisamos.</span><br><span class="em" data-i18n="hero-h1-b">Arquitectamos.</span>
+          </h1>
+
+          <p class="lede hero__lede" data-i18n="hero-lede">
+            Diseñamos estructuras inteligentes que generan valor de forma eficiente, adaptable y difícil de copiar. Como el cangrejo paguro: la arquitectura permanece, el caparazón cambia.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--accent" href="ecosistema-medium.html"><span data-i18n="hero-cta-1">Explorar el ecosistema</span> <span class="arr">→</span></a>
+            <a class="btn btn--ghost" href="sobre-medium.html" data-i18n="hero-cta-2">Conocer la filosofía</a>
+          </div>
+
+          <div class="hero__foot">
+            <div class="hero__stat"><span class="v">2</span><span class="l" data-i18n="hero-stat-1-l">Unidades activas</span></div>
+            <div class="hero__stat"><span class="v">+1</span><span class="l" data-i18n="hero-stat-2-l">En desarrollo</span></div>
+            <div class="hero__stat"><span class="v">B2B+B2C</span><span class="l" data-i18n="hero-stat-3-l">Modelo dual</span></div>
+            <div class="hero__stat"><span class="v">CO</span><span class="l" data-i18n="hero-stat-4-l">Sede · Bogotá</span></div>
+          </div>
+        </div>
+
+        <!-- HERO DIAGRAM — arquitectura del ecosistema -->
+        <div class="diagram">
+          <svg viewBox="0 0 400 400" fill="none">
+            <defs>
+              <radialGradient id="hero-core" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ee7224" stop-opacity=".4"/>
+                <stop offset="60%" stop-color="#c01c83" stop-opacity=".2"/>
+                <stop offset="100%" stop-color="#0360ab" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="hero-blur"><feGaussianBlur stdDeviation="2"/></filter>
+            </defs>
+
+            <!-- Outer dashed -->
+            <circle cx="200" cy="200" r="190" stroke="#ffffff" stroke-opacity=".05" stroke-dasharray="2 8"/>
+
+            <!-- Orbit ring -->
+            <g class="orbit">
+              <circle cx="200" cy="200" r="155" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="1 5"/>
+              <g transform="translate(200,45)">
+                <circle r="20" fill="#0360ab" fill-opacity=".12" filter="url(#hero-blur)"/>
+                <circle r="7" fill="#0360ab"/>
+                <circle r="3" fill="#ffffff"/>
+              </g>
+              <g transform="translate(335,272)">
+                <circle r="20" fill="#ee7224" fill-opacity=".12" filter="url(#hero-blur)"/>
+                <circle r="7" fill="#ee7224"/>
+                <circle r="3" fill="#ffffff"/>
+              </g>
+              <g transform="translate(65,272)">
+                <circle r="20" fill="#e72175" fill-opacity=".12" filter="url(#hero-blur)"/>
+                <circle r="7" fill="#e72175"/>
+                <circle r="3" fill="#ffffff"/>
+              </g>
+            </g>
+
+            <!-- Middle rings -->
+            <circle cx="200" cy="200" r="105" stroke="#ffffff" stroke-opacity=".12"/>
+            <circle cx="200" cy="200" r="65" stroke="#ee7224" stroke-opacity=".25" stroke-dasharray="3 4"/>
+
+            <!-- Nucleus glow -->
+            <circle cx="200" cy="200" r="80" fill="url(#hero-core)"/>
+
+            <!-- Nucleus core -->
+            <g class="pulse">
+              <circle cx="200" cy="200" r="36" fill="#0a0b0d" stroke="#ee7224" stroke-opacity=".7"/>
+              <circle cx="200" cy="200" r="10" fill="#ee7224"/>
+              <circle cx="200" cy="200" r="4" fill="#ffffff"/>
+            </g>
+
+            <!-- Connection lines -->
+            <line x1="200" y1="200" x2="200" y2="50" stroke="#0360ab" stroke-opacity=".3" stroke-dasharray="2 4"/>
+            <line x1="200" y1="200" x2="325" y2="270" stroke="#ee7224" stroke-opacity=".3" stroke-dasharray="2 4"/>
+            <line x1="200" y1="200" x2="75" y2="270" stroke="#e72175" stroke-opacity=".3" stroke-dasharray="2 4"/>
+
+            <!-- Labels -->
+            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#7e848f" letter-spacing="1.5">
+              <text x="200" y="30" text-anchor="middle">PAGURAI</text>
+              <text x="362" y="290" text-anchor="middle">PAGUREO</text>
+              <text x="40" y="290" text-anchor="middle">ERMITAÑO</text>
+              <text x="200" y="262" text-anchor="middle" fill="#ee7224">[ NÚCLEO ]</text>
+            </g>
+
+            <!-- Coord markers -->
+            <g stroke="#3d4452" stroke-width="1">
+              <line x1="0" y1="200" x2="16" y2="200"/><line x1="384" y1="200" x2="400" y2="200"/>
+              <line x1="200" y1="0" x2="200" y2="16"/><line x1="200" y1="384" x2="200" y2="400"/>
+            </g>
+            <text x="10" y="395" font-family="JetBrains Mono, monospace" font-size="9" fill="#3d4452" letter-spacing="1">FIG·01 · arquitectura del ecosistema</text>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       02 · ESENCIA (pull quote dramático)
+       ============================================================ -->
+  <section class="sec sec--aurora">
+    <div class="canvas canvas--narrow">
+      <div class="esencia">
+        <span class="esencia__kicker"><span class="line"></span>ESENCIA DE MARCA<span class="line"></span></span>
+        <h2 class="esencia__title">
+          <span class="em">La arquitectura permanece.</span><br>
+          El caparazón cambia.
+        </h2>
+        <p class="esencia__sub">No construimos empresas tradicionales. Construimos sistemas adaptativos diseñados para evolucionar — marcas que se transforman cuando el entorno lo exige, sin perder el núcleo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       03 · PROPÓSITO
+       ============================================================ -->
+  <section class="sec sec--with-divider" id="proposito">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>PROPÓSITO</span>
+      </div>
+      <div class="proposito">
+        <div class="proposito__main">
+          <p>
+            Construimos <span class="em">ecosistemas empresariales modernos,</span> automatizados y adaptativos que <span class="em">redefinen categorías</span> y multiplican valor con <span class="em">precisión estructural.</span>
+          </p>
+        </div>
+        <div class="proposito__side">
+          <div class="item">
+            <span class="label">Tipo</span>
+            <span class="value">Holding estratégico</span>
+          </div>
+          <div class="item">
+            <span class="label">Sede</span>
+            <span class="value">Bogotá · Colombia</span>
+          </div>
+          <div class="item">
+            <span class="label">Modelo</span>
+            <span class="value">B2B + B2C dual</span>
+          </div>
+          <div class="item">
+            <span class="label">Doctrina</span>
+            <span class="value">Sistemas antes que personas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       04 · VALORES (5 cards de la matriz de marca)
+       ============================================================ -->
+  <section class="sec sec--with-divider sec--aurora" id="valores">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>VALORES INSTITUCIONALES</span>
+        <h2 class="h1">Cinco principios. Una arquitectura.</h2>
+        <p class="lede">Cada decisión del holding y de sus marcas pasa por este filtro. No son palabras de cultura — son criterios operativos.</p>
+      </div>
+
+      <div class="valores-grid">
+        <div class="valor valor--adaptabilidad">
+          <span class="valor__num">01 / 05</span>
+          <h3 class="valor__name">Adaptabilidad</h3>
+          <p class="valor__desc">Mutamos estructuras, no perdemos el núcleo. Cada caparazón se rediseña cuando el mercado lo exige.</p>
+        </div>
+        <div class="valor valor--automatizacion">
+          <span class="valor__num">02 / 05</span>
+          <h3 class="valor__name">Automatización</h3>
+          <p class="valor__desc">Sistemas antes que personas. Donde un proceso se repite, vive un agente. Donde un agente vive, libera capacidad humana.</p>
+        </div>
+        <div class="valor valor--diseno">
+          <span class="valor__num">03 / 05</span>
+          <h3 class="valor__name">Diseño funcional</h3>
+          <p class="valor__desc">El diseño es claridad, percepción y ventaja. No es estética — es decisión estructural.</p>
+        </div>
+        <div class="valor valor--inteligencia">
+          <span class="valor__num">04 / 05</span>
+          <h3 class="valor__name">Inteligencia sistémica</h3>
+          <p class="valor__desc">Pensamos en flujos, eficiencia y escalabilidad. Optimizamos el sistema, no la tarea.</p>
+        </div>
+        <div class="valor valor--evolucion">
+          <span class="valor__num">05 / 05</span>
+          <h3 class="valor__name">Evolución permanente</h3>
+          <p class="valor__desc">Nada es definitivo. Todo puede optimizarse. La permanencia está en la arquitectura, no en el output.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       05 · ECOSISTEMA
+       ============================================================ -->
+  <section class="sec sec--with-divider" id="ecosistema">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>ECOSISTEMA · MARCAS-CAPARAZÓN</span>
+        <h2 class="h1">Dos unidades activas. Una en desarrollo. Un mismo sistema.</h2>
+        <p class="lede">Cada unidad opera con autonomía completa, sitio web independiente y modelo de negocio propio. El holding define la doctrina; cada marca la materializa para su mercado.</p>
+      </div>
+
+      <div class="eco-grid">
+
+        <article class="eco-card eco-card--pagurai">
+          <span class="tag tag--pagurai"><span class="dot"></span>AGENCIA · IA · B2B</span>
+          <h3 class="eco-card__title">Pagurai</h3>
+          <p class="eco-card__tagline">Automatización e inteligencia artificial para operaciones críticas. Premium, técnico, integrado.</p>
+          <div class="eco-card__body">
+            Chatbots IA, agentes, integraciones, consultoría, marketing IA, contenido IA y estrategia digital para organizaciones que necesitan escalar sin contratar más.
+          </div>
+          <div class="eco-card__foot">
+            <a class="eco-card__dom" href="https://pagurai.com" target="_blank" rel="noopener">pagurai.com ↗</a>
+            <span class="eco-card__stat">En desarrollo</span>
+          </div>
+        </article>
+
+        <article class="eco-card eco-card--pagureo">
+          <span class="tag tag--pagureo"><span class="dot"></span>ECOMMERCE · B2C</span>
+          <h3 class="eco-card__title">Pagureo</h3>
+          <p class="eco-card__tagline">Home office, muebles, accesorios y gaming. Smart minimalist para clase media en Bogotá.</p>
+          <div class="eco-card__body">
+            Curaduría editorial sobre catálogo. Desk setups completos para trabajadores remotos. Calidad sobre rotación, función sobre tendencia.
+          </div>
+          <div class="eco-card__foot">
+            <a class="eco-card__dom" href="https://pagureo.com" target="_blank" rel="noopener">pagureo.com ↗</a>
+            <span class="eco-card__stat">Activo · Bogotá</span>
+          </div>
+        </article>
+
+        <article class="eco-card eco-card--ermitano">
+          <span class="tag tag--ermitano"><span class="dot"></span>MEDIA · IP · AWARENESS</span>
+          <h3 class="eco-card__title">Ermitaño Pep</h3>
+          <p class="eco-card__tagline">El motor narrativo del ecosistema. Personaje, universo y producciones de awareness.</p>
+          <div class="eco-card__body">
+            Branding, storytelling y producciones que construyen reconocimiento para todo el holding. La marca que no vende — significa.
+          </div>
+          <div class="eco-card__foot">
+            <a class="eco-card__dom" href="#" target="_blank" rel="noopener">canales ↗</a>
+            <span class="eco-card__stat">En desarrollo</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="sec__foot">
+        <span class="body-s">¿Querés ver cómo se relacionan las tres unidades?</span>
+        <a class="btn" href="ecosistema-medium.html">Ver ecosistema completo <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       06 · MANIFIESTO
+       ============================================================ -->
+  <section class="sec sec--aurora" id="manifiesto">
+    <div class="canvas canvas--narrow">
+      <div class="manifesto">
+        <span class="eyebrow"><span class="dot"></span>MANTRA · DOCTRINA OPERATIVA</span>
+        <div class="manifesto__lines">
+          <div class="manifesto__line"><span class="em">Diseñar</span> antes de ejecutar.</div>
+          <div class="manifesto__line"><span class="em">Automatizar</span> antes de contratar.</div>
+          <div class="manifesto__line"><span class="em">Optimizar</span> siempre.</div>
+          <div class="manifesto__line"><span class="em">Evolucionar</span> constantemente.</div>
+        </div>
+        <div class="manifesto__caption">— Corporación Paguro SAS · Bogotá</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       07 · MÉTODO
+       ============================================================ -->
+  <section class="sec sec--with-divider" id="metodo">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>MÉTODO PAGURO</span>
+        <h2 class="h1">Cuatro decisiones antes de cualquier acción.</h2>
+        <p class="lede">El método se aplica idéntico a cada proyecto del holding — sea un agente IA, un setup de escritorio o una pieza narrativa. Sin método hay actividad. Con método hay sistema.</p>
+      </div>
+
+      <div class="method-grid">
+        <div class="method-step">
+          <span class="method-step__num">01 / 04</span>
+          <h4 class="method-step__verb">Diseñar<span>antes de ejecutar</span></h4>
+          <p class="method-step__desc">Primero el sistema. Después el output. La arquitectura siempre antecede al objeto.</p>
+        </div>
+        <div class="method-step">
+          <span class="method-step__num">02 / 04</span>
+          <h4 class="method-step__verb">Automatizar<span>antes de contratar</span></h4>
+          <p class="method-step__desc">Donde un proceso se repite, vive un agente. Donde un agente vive, libera capacidad humana.</p>
+        </div>
+        <div class="method-step">
+          <span class="method-step__num">03 / 04</span>
+          <h4 class="method-step__verb">Optimizar<span>siempre</span></h4>
+          <p class="method-step__desc">No crecemos en lo que no entendemos. Medir, ajustar, medir — antes de duplicar.</p>
+        </div>
+        <div class="method-step">
+          <span class="method-step__num">04 / 04</span>
+          <h4 class="method-step__verb">Evolucionar<span>constantemente</span></h4>
+          <p class="method-step__desc">El paguro cambia de caparazón cuando crece. Las marcas también. La permanencia está en la arquitectura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       08 · INSIGHTS
+       ============================================================ -->
+  <section class="sec sec--with-divider" id="insights">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>INSIGHTS / LAB</span>
+        <h2 class="h1">Pensamiento estratégico, publicado mensualmente.</h2>
+        <p class="lede">El Lab es donde el método se vuelve público. Si construimos sistemas para otros, también escribimos sobre cómo se construyen.</p>
+      </div>
+
+      <div class="cards-3">
+
+        <article class="insight-card">
+          <span class="insight-card__cat">IA · Método Paguro</span>
+          <h4 class="insight-card__title">Automatización radical: por qué la IA no reemplaza al equipo — lo escala.</h4>
+          <p class="insight-card__desc">El argumento detrás de la paradoja: contamos a más personas justo después de sustituir tareas por agentes. Sistemas antes que personas, en serio.</p>
+          <div class="insight-card__foot">
+            <span>Pagurai · Lead</span>
+            <span>8 min · 2026</span>
+          </div>
+        </article>
+
+        <article class="insight-card">
+          <span class="insight-card__cat">Branding · Holding</span>
+          <h4 class="insight-card__title">Arquitectura empresarial adaptativa: cómo articular marcas sin diluirlas.</h4>
+          <p class="insight-card__desc">La diferencia entre un holding y una sumatoria de empresas. Reglas que no negociamos cuando una unidad crece más rápido que las otras.</p>
+          <div class="insight-card__foot">
+            <span>Holding · Founder</span>
+            <span>11 min · 2026</span>
+          </div>
+        </article>
+
+        <article class="insight-card">
+          <span class="insight-card__cat">eCommerce · Operaciones</span>
+          <h4 class="insight-card__title">El setup como producto editorial: vender curaduría, no catálogo.</h4>
+          <p class="insight-card__desc">Cómo Pagureo evita competir por precio. La galería como interfaz comercial. Lecciones del modelo smart minimalist aplicado a B2C.</p>
+          <div class="insight-card__foot">
+            <span>Pagureo · Editor</span>
+            <span>6 min · 2026</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="sec__foot">
+        <a class="btn" href="#">Leer todo el Lab <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       09 · CLOSE CTA
+       ============================================================ -->
+  <!-- 09 · CIERRE CTA -->
+  <section class="sec sec--compact sec--with-divider" id="cierre">
+    <div class="canvas">
+      <div class="close-cta">
+        <div>
+          <span class="label">CIERRE · PRÓXIMO PASO</span>
+          <h3 class="close-cta__title" style="margin-top:14px">Si te interesa cómo opera un holding moderno,</h3>
+          <p class="close-cta__hand">empezá por las marcas-caparazón.</p>
+        </div>
+        <div class="close-cta__ctas">
+          <a class="btn btn--accent" href="ecosistema-medium.html">Explorar ecosistema <span class="arr">→</span></a>
+          <a class="btn" href="#contacto">Contacto estratégico <span class="arr">→</span></a>
+          <a class="btn btn--ghost" href="sobre-medium.html">Leer filosofía completa</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10 · CONTACTO — Formulario de contacto
+       ============================================================ -->
+  <section class="sec sec--contact sec--with-divider" id="contacto">
+    <div class="canvas">
+      <div class="contact-layout">
+
+        <!-- Intro -->
+        <div class="contact-intro">
+          <p class="contact-intro__kicker" data-i18n="contact-kicker">CONTACTO · PRIMER PASO</p>
+          <h2 class="contact-intro__title" data-i18n="contact-title">Hablemos del proyecto.</h2>
+          <p class="contact-intro__body" data-i18n="contact-body">Si tienes una idea, un reto empresarial o quieres saber cómo opera una arquitectura adaptativa, escríbenos. Respondemos en 24–48h.</p>
+          <div class="contact-meta">
+            <div class="contact-meta-item">
+              <span class="contact-meta-item__label" data-i18n="contact-loc-label">Sede</span>
+              <span class="contact-meta-item__val">Bogotá, Colombia</span>
+            </div>
+            <div class="contact-meta-item">
+              <span class="contact-meta-item__label" data-i18n="contact-email-label">Email</span>
+              <span class="contact-meta-item__val">hola@pagurocorp.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-form" id="contact-form" novalidate>
+
+          <div class="form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="cf-nombre">
+                <span data-i18n="field-nombre">Nombre</span><span class="req">*</span>
+              </label>
+              <input class="form-input" type="text" id="cf-nombre" name="nombre" required="" autocomplete="given-name" data-i18n-ph="ph-nombre" placeholder="Tu nombre">
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-apellido">
+                <span data-i18n="field-apellido">Apellido</span><span class="req">*</span>
+              </label>
+              <input class="form-input" type="text" id="cf-apellido" name="apellido" required="" autocomplete="family-name" data-i18n-ph="ph-apellido" placeholder="Tu apellido">
+              <span class="form-error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="cf-email">
+                Email<span class="req">*</span>
+              </label>
+              <input class="form-input" type="email" id="cf-email" name="email" required="" autocomplete="email" data-i18n-ph="ph-email" placeholder="correo@ejemplo.com">
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-telefono">
+                <span data-i18n="field-telefono">Teléfono</span><span class="req">*</span>
+              </label>
+              <input class="form-input" type="tel" id="cf-telefono" name="telefono" required="" autocomplete="tel" data-i18n-ph="ph-telefono" placeholder="+57 300 000 0000">
+              <span class="form-error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row--2">
+            <div class="form-group">
+              <label class="form-label" for="cf-website">
+                <span data-i18n="field-website">Website</span><span class="opt" data-i18n="opt">(opcional)</span>
+              </label>
+              <input class="form-input" type="url" id="cf-website" name="website" autocomplete="url" data-i18n-ph="ph-website" placeholder="https://tuempresa.com">
+              <span class="form-error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-empresa">
+                <span data-i18n="field-empresa">Nombre empresa</span><span class="opt" data-i18n="opt">(opcional)</span>
+              </label>
+              <input class="form-input" type="text" id="cf-empresa" name="empresa" autocomplete="organization" data-i18n-ph="ph-empresa" placeholder="Tu empresa">
+              <span class="form-error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="cf-mensaje">
+              <span data-i18n="field-mensaje">Mensaje</span><span class="req">*</span>
+            </label>
+            <textarea class="form-input form-textarea" id="cf-mensaje" name="mensaje" required="" rows="5" data-i18n-ph="ph-mensaje" placeholder="Cuéntanos sobre tu proyecto o consulta…"></textarea>
+            <span class="form-error-msg"></span>
+          </div>
+
+          <div class="form-footer">
+            <p class="form-req-note"><span class="req">*</span>&nbsp;<span data-i18n="req-note">Campos obligatorios</span></p>
+            <button class="btn btn--accent form-submit" type="submit">
+              <span data-i18n="submit-btn">Enviar mensaje</span>&nbsp;<span class="arr">→</span>
+            </button>
+          </div>
+
+          <div class="form-success">
+            <em class="form-success__ico">✓</em>
+            <p data-i18n="success-msg">¡Mensaje enviado! Te contactamos pronto.</p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="canvas">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="#">
+          <img class="logo__mark" src="assets/paguro-isotipo.png" alt="Paguro" width="22" height="22">
+          <span class="logo__text">PAGURO<small>CORPORACIÓN PAGURO SAS</small></span>
+        </a>
+        <p data-i18n="footer-brand-desc">Holding institucional moderno. Arquitectura empresarial adaptativa, automatización e inteligencia sistémica. Bogotá · Colombia.</p>
+      </div>
+      <div class="footer__col">
+        <h6>Holding</h6>
+        <ul>
+          <li><a href="sobre-medium.html">Sobre Paguro</a></li>
+          <li><a href="sobre-medium.html#filosofia">Filosofía</a></li>
+          <li><a href="sobre-medium.html#metodo">Método</a></li>
+          <li><a href="sobre-medium.html#valores">Valores</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h6>Marcas</h6>
+        <ul>
+          <li><a href="ecosistema-medium.html#pagurai">Pagurai</a></li>
+          <li><a href="ecosistema-medium.html#pagureo">Pagureo</a></li>
+          <li><a href="ecosistema-medium.html#ermitano">Ermitaño Pep</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h6>Contenido</h6>
+        <ul>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Casos</a></li>
+          <li><a href="#insights">Insights / Lab</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h6>Legal</h6>
+        <ul>
+          <li><a href="#contacto">Contacto estratégico</a></li>
+          <li><a href="#">Privacidad</a></li>
+          <li><a href="#">Términos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Corporación Paguro SAS</span>
+      <span data-i18n="footer-tagline">Paguro es una arquitectura diseñada para producir excelencia repetible.</span>
+      <span>v0.4 · medium fidelity</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     TWEAKS
+     ============================================================ -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="home-tweaks.jsx"></script>
+
+<script>
+  (function(){
+    const nav = document.getElementById('nav');
+    function onScroll(){ nav.classList.toggle('is-scrolled', window.scrollY > 16); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+</script>
+
+<script>
+(function(){
+  /* ─── COPY DICTIONARY ───────────────────────────────────────────── */
+  var COPY = {
+    es: {
+      'nav-sobre':'Sobre Paguro','nav-metodo':'Método','nav-insights':'Insights / Lab',
+      'nav-contacto':'Contacto','nav-cta':'Conocer marcas',
+      'hero-eyebrow':'HOLDING · BOGOTÁ · ARQUITECTURA EMPRESARIAL ADAPTATIVA',
+      'hero-h1-a':'No improvisamos.','hero-h1-b':'Arquitectamos.',
+      'hero-lede':'Diseñamos estructuras inteligentes que generan valor de forma eficiente, adaptable y difícil de copiar. Como el cangrejo paguro: la arquitectura permanece, el caparazón cambia.',
+      'hero-cta-1':'Explorar el ecosistema','hero-cta-2':'Conocer la filosofía',
+      'hero-stat-1-l':'Unidades activas','hero-stat-2-l':'En desarrollo',
+      'hero-stat-3-l':'Modelo dual','hero-stat-4-l':'Sede · Bogotá',
+      'contact-kicker':'CONTACTO · PRIMER PASO','contact-title':'Hablemos del proyecto.',
+      'contact-body':'Si tienes una idea, un reto empresarial o quieres saber cómo opera una arquitectura adaptativa, escríbenos. Respondemos en 24–48h.',
+      'contact-loc-label':'Sede','contact-email-label':'Email',
+      'field-nombre':'Nombre','field-apellido':'Apellido','field-telefono':'Teléfono',
+      'field-empresa':'Nombre empresa','field-website':'Website','field-mensaje':'Mensaje',
+      'opt':'(opcional)',
+      'ph-nombre':'Tu nombre','ph-apellido':'Tu apellido','ph-email':'correo@ejemplo.com',
+      'ph-telefono':'+57 300 000 0000','ph-website':'https://tuempresa.com',
+      'ph-empresa':'Tu empresa','ph-mensaje':'Cuéntanos sobre tu proyecto o consulta…',
+      'req-note':'Campos obligatorios','submit-btn':'Enviar mensaje',
+      'success-msg':'¡Mensaje enviado! Te contactamos pronto.',
+      'err-required':'Campo obligatorio','err-email':'Ingresa un email válido',
+      'err-url':'Ingresa una URL válida (https://…)',
+      'footer-brand-desc':'Holding institucional moderno. Arquitectura empresarial adaptativa, automatización e inteligencia sistémica. Bogotá · Colombia.',
+      'footer-tagline':'Paguro es una arquitectura diseñada para producir excelencia repetible.'
+    },
+    en: {
+      'nav-sobre':'About Paguro','nav-metodo':'Method','nav-insights':'Insights / Lab',
+      'nav-contacto':'Contact','nav-cta':'Explore brands',
+      'hero-eyebrow':'HOLDING · BOGOTÁ · ADAPTIVE BUSINESS ARCHITECTURE',
+      'hero-h1-a':"We don't improvise.",'hero-h1-b':'We architect.',
+      'hero-lede':"We design intelligent structures that generate value efficiently, adaptively, and in ways hard to replicate. Like the hermit crab: the architecture stays, the shell changes.",
+      'hero-cta-1':'Explore the ecosystem','hero-cta-2':'Read the philosophy',
+      'hero-stat-1-l':'Active units','hero-stat-2-l':'In development',
+      'hero-stat-3-l':'Dual model','hero-stat-4-l':'HQ · Bogotá',
+      'contact-kicker':'CONTACT · FIRST STEP','contact-title':"Let's talk about your project.",
+      'contact-body':"If you have an idea, a business challenge, or want to understand how an adaptive architecture works — reach out. We respond within 24–48h.",
+      'contact-loc-label':'Location','contact-email-label':'Email',
+      'field-nombre':'First name','field-apellido':'Last name','field-telefono':'Phone',
+      'field-empresa':'Company name','field-website':'Website','field-mensaje':'Message',
+      'opt':'(optional)',
+      'ph-nombre':'Your first name','ph-apellido':'Your last name','ph-email':'email@example.com',
+      'ph-telefono':'+1 300 000 0000','ph-website':'https://yourcompany.com',
+      'ph-empresa':'Your company','ph-mensaje':'Tell us about your project or inquiry…',
+      'req-note':'Required fields','submit-btn':'Send message',
+      'success-msg':"Message sent! We'll be in touch soon.",
+      'err-required':'Required field','err-email':'Enter a valid email address',
+      'err-url':'Enter a valid URL (https://…)',
+      'footer-brand-desc':'Modern institutional holding. Adaptive business architecture, automation and systemic intelligence. Bogotá · Colombia.',
+      'footer-tagline':'Paguro is an architecture designed to produce repeatable excellence.'
+    }
+  };
+
+  /* ─── ICONS ─────────────────────────────────────────────────────── */
+  var SUN  = '<svg viewBox="0 0 16 16" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M8 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 8 2zm0 9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 8 11zm-7-3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1A.5.5 0 0 1 1 8zm10.5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1 0-1zM2.636 4.05a.5.5 0 0 1 .708-.708l.707.707a.5.5 0 0 1-.707.707l-.708-.707zm9.193 8.485a.5.5 0 0 1-.707-.707l.707-.707a.5.5 0 0 1 .707.707l-.707.707zM2.636 11.95a.5.5 0 0 1 0-.707l.708-.707a.5.5 0 0 1 .707.707l-.707.708a.5.5 0 0 1-.708 0zm9.193-8.485a.5.5 0 0 1 .707.707l-.707.707a.5.5 0 0 1-.707-.707l.707-.707zM8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>';
+  var MOON = '<svg viewBox="0 0 16 16" fill="currentColor" width="13" height="13" aria-hidden="true"><path d="M6 .278a.77.77 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/></svg>';
+
+  /* ─── THEME ─────────────────────────────────────────────────────── */
+  var theme = localStorage.getItem('paguro-theme') || 'dark';
+  function applyTheme(t) {
+    theme = t;
+    localStorage.setItem('paguro-theme', t);
+    document.body.classList.toggle('theme-light', t === 'light');
+    var btn = document.getElementById('toggle-theme');
+    if (btn) {
+      btn.innerHTML = t === 'dark' ? SUN : MOON;
+      btn.title = t === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro';
+    }
+  }
+
+  /* ─── LANG ──────────────────────────────────────────────────────── */
+  var lang = localStorage.getItem('paguro-lang') || 'es';
+  function applyLang(l) {
+    lang = l;
+    localStorage.setItem('paguro-lang', l);
+    document.documentElement.lang = l;
+    var c = COPY[l];
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var k = el.getAttribute('data-i18n');
+      if (c[k] !== undefined) el.textContent = c[k];
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function(el) {
+      var k = el.getAttribute('data-i18n-ph');
+      if (c[k] !== undefined) el.placeholder = c[k];
+    });
+    var langBtn = document.getElementById('toggle-lang');
+    if (langBtn) langBtn.textContent = l === 'es' ? 'EN' : 'ES';
+  }
+
+  /* ─── FORM ──────────────────────────────────────────────────────── */
+  function initForm() {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var valid = true;
+      var c = COPY[lang];
+      form.querySelectorAll('.form-group').forEach(function(g) {
+        g.classList.remove('has-error');
+        var em = g.querySelector('.form-error-msg');
+        if (em) em.textContent = '';
+      });
+      form.querySelectorAll('[required]').forEach(function(inp) {
+        if (!inp.value.trim()) {
+          var g = inp.closest('.form-group');
+          g.classList.add('has-error');
+          var em = g.querySelector('.form-error-msg');
+          if (em) em.textContent = c['err-required'];
+          valid = false;
+        }
+      });
+      var emailInp = form.querySelector('#cf-email');
+      if (emailInp && emailInp.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInp.value)) {
+        var g = emailInp.closest('.form-group');
+        g.classList.add('has-error');
+        var em = g.querySelector('.form-error-msg');
+        if (em) em.textContent = c['err-email'];
+        valid = false;
+      }
+      var urlInp = form.querySelector('#cf-website');
+      if (urlInp && urlInp.value.trim() && !/^https?:\/\/.+/.test(urlInp.value.trim())) {
+        var g = urlInp.closest('.form-group');
+        g.classList.add('has-error');
+        var em = g.querySelector('.form-error-msg');
+        if (em) em.textContent = c['err-url'];
+        valid = false;
+      }
+      if (!valid) return;
+      form.classList.add('is-sent');
+    });
+  }
+
+  /* ─── INIT ──────────────────────────────────────────────────────── */
+  applyTheme(theme);
+  applyLang(lang);
+  initForm();
+
+  var themeBtn = document.getElementById('toggle-theme');
+  var langBtn  = document.getElementById('toggle-lang');
+  if (themeBtn) themeBtn.addEventListener('click', function(){ applyTheme(theme === 'dark' ? 'light' : 'dark'); });
+  if (langBtn)  langBtn.addEventListener('click',  function(){ applyLang(lang   === 'es'   ? 'en'    : 'es'); });
+})();
+</script>
+
+</body>
+</html>

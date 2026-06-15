@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ecosistema · Pagurai · Pagureo · Ermitaño Pep</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="home-medium.css">
+</head>
+<body class="density-regular accent-orange" data-screen-label="03 Ecosistema">
+
+<nav class="page-switch">
+  <a href="home-medium.html">Home</a>
+  <a href="sobre-medium.html">Sobre</a>
+  <a href="ecosistema-medium.html" class="is-current">Ecosistema</a>
+</nav>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="logo" href="home-medium.html">
+      <img class="logo__mark" src="assets/paguro-isotipo.png" alt="Paguro" width="22" height="22">
+      <span class="logo__text">PAGURO<small>CORPORACIÓN PAGURO SAS</small></span>
+    </a>
+    <nav class="nav__items">
+      <a href="sobre-medium.html">Sobre Paguro</a>
+      <a href="ecosistema-medium.html" class="is-current">Ecosistema <span class="chev">▾</span></a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#">Insights / Lab</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--accent btn--sm" href="#unidades">Conocer marcas <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="sec sec--hero sec--aurora">
+    <div class="canvas">
+      <div class="hero__layout">
+        <div class="hero__content">
+          <div class="hero__meta">
+            <span class="eyebrow"><span class="dot"></span>ECOSISTEMA · MARCAS-CAPARAZÓN</span>
+          </div>
+          <h1 class="display">
+            Dos marcas activas.<br><span class="em">Una en desarrollo.</span><br>Un mismo sistema.
+          </h1>
+          <p class="lede hero__lede">
+            Pagurai opera servicios B2B de IA y automatización. Pagureo opera ecommerce B2C de home office. Ermitaño Pep construye awareness narrativa. Cada caparazón es independiente — la arquitectura los une.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--accent" href="#unidades">Ver las marcas <span class="arr">→</span></a>
+            <a class="btn btn--ghost" href="#matriz">Matriz comparativa</a>
+          </div>
+        </div>
+
+        <!-- ECO RELATIONSHIP DIAGRAM -->
+        <div class="diagram">
+          <svg viewBox="0 0 400 400" fill="none">
+            <defs>
+              <radialGradient id="eco-core-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ee7224" stop-opacity=".35"/>
+                <stop offset="60%" stop-color="#c01c83" stop-opacity=".15"/>
+                <stop offset="100%" stop-color="#0360ab" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <!-- Bounding rings -->
+            <rect x="20" y="20" width="360" height="360" fill="none" stroke="#3d4452" stroke-opacity=".3" stroke-dasharray="2 4"/>
+            <circle cx="200" cy="200" r="170" stroke="#ffffff" stroke-opacity=".05" stroke-dasharray="2 8"/>
+            <circle cx="200" cy="200" r="120" stroke="#ffffff" stroke-opacity=".1" stroke-dasharray="1 4"/>
+
+            <!-- Center HOLDING -->
+            <circle cx="200" cy="200" r="110" fill="url(#eco-core-glow)"/>
+            <g class="pulse">
+              <rect x="155" y="180" width="90" height="50" rx="6" fill="#0a0b0d" stroke="#ee7224" stroke-width="1.5"/>
+              <text x="200" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#ebedef" letter-spacing="2">HOLDING</text>
+              <text x="200" y="215" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#ee7224" letter-spacing="2">CORPORACIÓN</text>
+            </g>
+
+            <!-- Pagurai node top -->
+            <g>
+              <line x1="200" y1="180" x2="200" y2="100" stroke="#0360ab" stroke-opacity=".5" stroke-dasharray="2 3"/>
+              <rect x="148" y="55" width="104" height="46" rx="6" fill="#0a0b0d" stroke="#0360ab" stroke-width="1.5"/>
+              <text x="200" y="75" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#7ec0f0">PAGURAI</text>
+              <text x="200" y="90" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#5aa9e6" letter-spacing="1.5">AGENCIA · IA · B2B</text>
+            </g>
+
+            <!-- Pagureo node bottom right -->
+            <g>
+              <line x1="232" y1="230" x2="290" y2="290" stroke="#ee7224" stroke-opacity=".5" stroke-dasharray="2 3"/>
+              <rect x="270" y="295" width="110" height="46" rx="6" fill="#0a0b0d" stroke="#ee7224" stroke-width="1.5"/>
+              <text x="325" y="315" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#f49659">PAGUREO</text>
+              <text x="325" y="330" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#f49659" letter-spacing="1.5">ECOMMERCE · B2C</text>
+            </g>
+
+            <!-- Ermitaño node bottom left -->
+            <g>
+              <line x1="168" y1="230" x2="110" y2="290" stroke="#e72175" stroke-opacity=".5" stroke-dasharray="2 3"/>
+              <rect x="20" y="295" width="120" height="46" rx="6" fill="#0a0b0d" stroke="#e72175" stroke-width="1.5"/>
+              <text x="80" y="315" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#f060a1">ERMITAÑO</text>
+              <text x="80" y="330" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#f060a1" letter-spacing="1.5">MEDIA · IP · AWARENESS</text>
+            </g>
+
+            <!-- Cross-connections (faint) -->
+            <line x1="252" y1="78" x2="325" y2="295" stroke="#ffffff" stroke-opacity=".06" stroke-dasharray="1 3"/>
+            <line x1="148" y1="78" x2="80" y2="295" stroke="#ffffff" stroke-opacity=".06" stroke-dasharray="1 3"/>
+            <line x1="140" y1="318" x2="270" y2="318" stroke="#ffffff" stroke-opacity=".06" stroke-dasharray="1 3"/>
+
+            <text x="10" y="395" font-family="JetBrains Mono, monospace" font-size="9" fill="#3d4452" letter-spacing="1">FIG·04 · arquitectura de marca</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS strip -->
+  <section class="sec sec--compact">
+    <div class="canvas">
+      <div class="stats-strip">
+        <div class="stat"><span class="v">3</span><span class="l">Unidades de negocio</span></div>
+        <div class="stat"><span class="v">B2B+B2C</span><span class="l">Modelo dual</span></div>
+        <div class="stat"><span class="v">2/3</span><span class="l">Activas operativamente</span></div>
+        <div class="stat"><span class="v">CO</span><span class="l">Sede del holding</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAS 3 UNIDADES (expandidas) -->
+  <section class="sec sec--with-divider" id="unidades">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>UNIDADES DEL ECOSISTEMA</span>
+        <h2 class="h1">Tres caparazones. Tres mercados. Una misma doctrina.</h2>
+      </div>
+
+      <div class="eco-grid">
+
+        <article class="eco-card eco-card--pagurai" id="pagurai">
+          <span class="tag tag--pagurai"><span class="dot"></span>AGENCIA · IA · B2B</span>
+          <h3 class="eco-card__title">Pagurai</h3>
+          <p class="eco-card__tagline">Automatización e inteligencia artificial para operaciones críticas.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:14px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)">
+            <span class="label">SERVICIOS PRINCIPALES</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Chatbots IA</span>
+              <span class="tag">Agentes IA</span>
+              <span class="tag">Automatizaciones</span>
+              <span class="tag">Integraciones</span>
+              <span class="tag">Consultoría</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span class="label">SERVICIOS SECUNDARIOS</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Marketing IA</span>
+              <span class="tag">Contenido IA</span>
+              <span class="tag">Estrategia digital</span>
+            </div>
+          </div>
+          <div class="eco-card__foot">
+            <a class="eco-card__dom" href="https://pagurai.com" target="_blank" rel="noopener">pagurai.com ↗</a>
+            <span class="eco-card__stat">En desarrollo</span>
+          </div>
+        </article>
+
+        <article class="eco-card eco-card--pagureo" id="pagureo">
+          <span class="tag tag--pagureo"><span class="dot"></span>ECOMMERCE · B2C</span>
+          <h3 class="eco-card__title">Pagureo</h3>
+          <p class="eco-card__tagline">Home office, muebles, accesorios y gaming. Smart minimalist.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:14px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)">
+            <span class="label">CATEGORÍAS</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Home office</span>
+              <span class="tag">Desk setup</span>
+              <span class="tag">Muebles</span>
+              <span class="tag">Accesorios</span>
+              <span class="tag">Gaming</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span class="label">MERCADO</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Bogotá</span>
+              <span class="tag">Trabajadores remotos</span>
+              <span class="tag">Clase media</span>
+            </div>
+          </div>
+          <div class="eco-card__foot">
+            <a class="eco-card__dom" href="https://pagureo.com" target="_blank" rel="noopener">pagureo.com ↗</a>
+            <span class="eco-card__stat">Activo</span>
+          </div>
+        </article>
+
+        <article class="eco-card eco-card--ermitano" id="ermitano">
+          <span class="tag tag--ermitano"><span class="dot"></span>MEDIA · IP · AWARENESS</span>
+          <h3 class="eco-card__title">Ermitaño Pep</h3>
+          <p class="eco-card__tagline">El motor narrativo del ecosistema. Personaje, universo, awareness.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:14px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line)">
+            <span class="label">CONTENIDO</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Branding</span>
+              <span class="tag">Storytelling</span>
+              <span class="tag">Universo narrativo</span>
+              <span class="tag">Personaje</span>
+              <span class="tag">Producciones</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span class="label">OBJETIVO ESTRATÉGICO</span>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span class="tag">Awareness</span>
+              <span class="tag">Cultura visual</span>
+              <span class="tag">Comunidad</span>
+            </div>
+          </div>
+          <div class="eco-card__foot">
+            <a class="eco-card__dom" href="#" target="_blank" rel="noopener">canales ↗</a>
+            <span class="eco-card__stat">En desarrollo</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MATRIZ COMPARATIVA -->
+  <section class="sec sec--with-divider sec--aurora" id="matriz">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>MATRIZ COMPARATIVA</span>
+        <h2 class="h1">Cómo se diferencian las marcas-caparazón.</h2>
+        <p class="lede">Misma arquitectura, foco distinto. Esta matriz ayuda a partners e inversionistas a comparar el ecosistema en un vistazo.</p>
+      </div>
+
+      <div class="matrix">
+        <div class="matrix__row is-head">
+          <div class="matrix__cell is-key">Dimensión</div>
+          <div class="matrix__cell is-head">
+            <div class="group">
+              <span class="tag tag--pagurai"><span class="dot"></span>Pagurai</span>
+              <strong>Pagurai</strong>
+            </div>
+          </div>
+          <div class="matrix__cell is-head">
+            <div class="group">
+              <span class="tag tag--pagureo"><span class="dot"></span>Pagureo</span>
+              <strong>Pagureo</strong>
+            </div>
+          </div>
+          <div class="matrix__cell is-head">
+            <div class="group">
+              <span class="tag tag--ermitano"><span class="dot"></span>Ermitaño</span>
+              <strong>Ermitaño Pep</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Categoría</div>
+          <div class="matrix__cell">Agencia IA</div>
+          <div class="matrix__cell">Ecommerce</div>
+          <div class="matrix__cell">Media / IP</div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Modelo</div>
+          <div class="matrix__cell">B2B · servicios</div>
+          <div class="matrix__cell">B2C · productos</div>
+          <div class="matrix__cell">Contenido · awareness</div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Audiencia</div>
+          <div class="matrix__cell">Empresas medianas</div>
+          <div class="matrix__cell">Trabajadores remotos · BOG</div>
+          <div class="matrix__cell">Comunidad amplia</div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Percepción</div>
+          <div class="matrix__cell">Premium tecnológica</div>
+          <div class="matrix__cell">Smart minimalist</div>
+          <div class="matrix__cell">Cultural · narrativa</div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Rol estratégico</div>
+          <div class="matrix__cell">Motor operativo</div>
+          <div class="matrix__cell">Validación de mercado</div>
+          <div class="matrix__cell">Awareness del holding</div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Estado</div>
+          <div class="matrix__cell">En desarrollo</div>
+          <div class="matrix__cell">Activo</div>
+          <div class="matrix__cell">En desarrollo</div>
+        </div>
+        <div class="matrix__row">
+          <div class="matrix__cell is-key">Dominio</div>
+          <div class="matrix__cell"><a class="eco-card__dom" href="https://pagurai.com" target="_blank" rel="noopener">pagurai.com ↗</a></div>
+          <div class="matrix__cell"><a class="eco-card__dom" href="https://pagureo.com" target="_blank" rel="noopener">pagureo.com ↗</a></div>
+          <div class="matrix__cell"><a class="eco-card__dom" href="#" target="_blank" rel="noopener">canales sociales ↗</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO SE CONECTAN -->
+  <section class="sec sec--with-divider" id="relacion">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>RELACIÓN ENTRE UNIDADES</span>
+        <h2 class="h1">Tres marcas que se retroalimentan.</h2>
+        <p class="lede">Cada unidad valida hipótesis para las demás. No son silos: son módulos del mismo sistema operativo.</p>
+      </div>
+
+      <div class="grid-12" style="grid-template-columns: 1fr 1fr 1fr; gap: 24px;">
+        <div class="valor valor--inteligencia">
+          <span class="valor__num">→ FLUJO 01</span>
+          <h3 class="valor__name">Pagurai opera</h3>
+          <p class="valor__desc">La automatización que Pagurai diseña para clientes externos opera también Pagureo internamente. El producto del holding usa el producto del holding.</p>
+        </div>
+        <div class="valor valor--adaptabilidad">
+          <span class="valor__num">→ FLUJO 02</span>
+          <h3 class="valor__name">Pagureo valida</h3>
+          <p class="valor__desc">Pagureo es el laboratorio de mercado del holding. Cada decisión comercial que prueba puede aplicarse a clientes B2B después.</p>
+        </div>
+        <div class="valor valor--automatizacion">
+          <span class="valor__num">→ FLUJO 03</span>
+          <h3 class="valor__name">Ermitaño amplifica</h3>
+          <p class="valor__desc">El awareness narrativo de Ermitaño Pep posiciona al holding completo. Las dos marcas comerciales heredan reconocimiento sin gastar en performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTERNAL CTAS -->
+  <section class="sec sec--with-divider" id="externos">
+    <div class="canvas">
+      <div class="sec__head">
+        <span class="eyebrow"><span class="dot"></span>VISITAR LAS MARCAS</span>
+        <h2 class="h1">Cada caparazón tiene su propia web.</h2>
+        <p class="lede">Esta página no reemplaza ninguna. Es el mapa estratégico — el holding como vista. Para profundizar en cada unidad, visitá su sitio independiente.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <a class="close-cta" href="https://pagurai.com" target="_blank" rel="noopener" style="text-decoration:none;display:grid;grid-template-columns:auto 1fr auto;gap:32px;padding:28px 36px;">
+          <span class="tag tag--pagurai"><span class="dot"></span>Pagurai</span>
+          <div>
+            <span class="label">AGENCIA · IA · B2B</span>
+            <div style="font-family:var(--font-display);font-size:22px;color:var(--ink);margin-top:6px">pagurai.com</div>
+          </div>
+          <span class="btn btn--accent btn--ext">visitar marca</span>
+        </a>
+
+        <a class="close-cta" href="https://pagureo.com" target="_blank" rel="noopener" style="text-decoration:none;display:grid;grid-template-columns:auto 1fr auto;gap:32px;padding:28px 36px;">
+          <span class="tag tag--pagureo"><span class="dot"></span>Pagureo</span>
+          <div>
+            <span class="label">ECOMMERCE · B2C</span>
+            <div style="font-family:var(--font-display);font-size:22px;color:var(--ink);margin-top:6px">pagureo.com</div>
+          </div>
+          <span class="btn btn--accent btn--ext">visitar marca</span>
+        </a>
+
+        <a class="close-cta" href="#" target="_blank" rel="noopener" style="text-decoration:none;display:grid;grid-template-columns:auto 1fr auto;gap:32px;padding:28px 36px;opacity:.7">
+          <span class="tag tag--ermitano"><span class="dot"></span>Ermitaño Pep</span>
+          <div>
+            <span class="label">MEDIA · IP · AWARENESS (próximamente)</span>
+            <div style="font-family:var(--font-display);font-size:22px;color:var(--ink);margin-top:6px">canales sociales</div>
+          </div>
+          <span class="btn btn--ext">muy pronto</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="sec sec--compact" id="contacto">
+    <div class="canvas">
+      <div class="close-cta">
+        <div>
+          <span class="label">CIERRE · PRÓXIMO PASO</span>
+          <h3 class="close-cta__title" style="margin-top:14px">¿Tu organización necesita un caparazón propio?</h3>
+          <p class="close-cta__hand">Hablemos de partnership o inversión estratégica.</p>
+        </div>
+        <div class="close-cta__ctas">
+          <a class="btn btn--accent" href="#">Contacto estratégico <span class="arr">→</span></a>
+          <a class="btn" href="sobre-medium.html">Conocer filosofía</a>
+          <a class="btn btn--ghost" href="home-medium.html">Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="canvas">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="home-medium.html">
+          <img class="logo__mark" src="assets/paguro-isotipo.png" alt="Paguro" width="22" height="22">
+          <span class="logo__text">PAGURO<small>CORPORACIÓN PAGURO SAS</small></span>
+        </a>
+        <p>Holding institucional moderno. Arquitectura empresarial adaptativa.</p>
+      </div>
+      <div class="footer__col"><h6>Holding</h6><ul><li><a href="sobre-medium.html">Sobre Paguro</a></li><li><a href="sobre-medium.html#filosofia">Filosofía</a></li><li><a href="sobre-medium.html#metodo">Método</a></li></ul></div>
+      <div class="footer__col"><h6>Marcas</h6><ul><li><a href="#pagurai">Pagurai</a></li><li><a href="#pagureo">Pagureo</a></li><li><a href="#ermitano">Ermitaño Pep</a></li></ul></div>
+      <div class="footer__col"><h6>Contenido</h6><ul><li><a href="#">Proyectos</a></li><li><a href="#">Casos</a></li><li><a href="#">Insights / Lab</a></li></ul></div>
+      <div class="footer__col"><h6>Legal</h6><ul><li><a href="#contacto">Contacto</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Términos</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Corporación Paguro SAS</span>
+      <span>Paguro es una arquitectura diseñada para producir excelencia repetible.</span>
+      <span>v0.4</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="home-tweaks.jsx"></script>
+<script>
+(function(){
+  const nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('is-scrolled', window.scrollY > 16); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>

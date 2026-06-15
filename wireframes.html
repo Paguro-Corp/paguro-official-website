@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Paguro Corp · Wireframes Fase 01</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============================================================
+       SIDEBAR — Navegación entre wireframes
+       ============================================================ -->
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="logo">PAGURO/CORP</div>
+      <div class="tag">wireframes · fase 01</div>
+      <div class="meta">v0.1 · baja fidelidad</div>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Fase 02</div>
+      <a class="nav-link" href="ux-system.html" style="color:var(--c-orange)"><span class="num">SYS</span>UX/UI System →</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Fase 03</div>
+      <a class="nav-link" href="home-medium.html" style="color:var(--c-orange)"><span class="num">HOME</span>Home medium-fi →</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Vista general</div>
+      <a class="nav-link" data-route="sitemap"><span class="num">00</span>Sitemap</a>
+      <a class="nav-link" data-route="components"><span class="num">CMP</span>Componentes</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Páginas principales</div>
+      <a class="nav-link" data-route="home"><span class="num">01</span>Home</a>
+      <a class="nav-link" data-route="sobre"><span class="num">02</span>Sobre Paguro</a>
+      <a class="nav-link" data-route="ecosistema"><span class="num">03</span>Ecosistema</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Unidades</div>
+      <a class="nav-link nav-link--sub" data-route="pagurai"><span class="dot" style="background:#0360ab"></span>Pagurai</a>
+      <a class="nav-link nav-link--sub" data-route="pagureo"><span class="dot" style="background:#ee7224"></span>Pagureo</a>
+      <a class="nav-link nav-link--sub" data-route="ermitano"><span class="dot" style="background:#e72175"></span>Ermitaño Pep</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Contenido</div>
+      <a class="nav-link" data-route="proyectos"><span class="num">04</span>Proyectos</a>
+      <a class="nav-link" data-route="proyecto-detalle"><span class="num">04b</span>Proyecto · detalle</a>
+      <a class="nav-link" data-route="casos"><span class="num">05</span>Casos</a>
+      <a class="nav-link" data-route="caso-detalle"><span class="num">05b</span>Caso · detalle</a>
+      <a class="nav-link" data-route="insights"><span class="num">06</span>Insights / Lab</a>
+      <a class="nav-link" data-route="articulo"><span class="num">06b</span>Artículo · detalle</a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group__title">Conversión</div>
+      <a class="nav-link" data-route="contacto"><span class="num">07</span>Contacto estratégico</a>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       CANVAS — todas las páginas wireframe
+       ============================================================ -->
+  <main class="canvas">
+
+    <!-- ============= SITEMAP ============= -->
+    <section class="page" data-page="sitemap" data-screen-label="00 Sitemap">
+      <div class="page__topbar">
+        <div class="page__crumbs">FASE 01 · <span>arquitectura</span> · <em>Sitemap global</em></div>
+        <div class="page__route">pagurocorp.com/*</div>
+      </div>
+      <div class="page__body">
+        <div class="page__title">
+          <h1>SITEMAP — mapa estratégico</h1>
+          <span class="id">00</span>
+        </div>
+        <p class="page__objective">Definir relaciones entre páginas y rutas navegables del sistema.</p>
+
+        <div class="legend">
+          <div class="legend__item"><span class="legend__swatch" style="background:#ee7224"></span>Naranja · Pagureo</div>
+          <div class="legend__item"><span class="legend__swatch" style="background:#0360ab"></span>Azul · Pagurai</div>
+          <div class="legend__item"><span class="legend__swatch" style="background:#e72175"></span>Rosa · Ermitaño Pep</div>
+          <div class="legend__item"><span class="legend__swatch" style="background:#1c1f24;border-color:#3a3f48"></span>Gris · Página institucional</div>
+          <div class="legend__item"><span class="legend__swatch" style="background:transparent;border-style:dashed"></span>Dashed · Sub-ruta</div>
+        </div>
+
+        <div class="sitemap">
+          <!-- ROOT -->
+          <div class="sm-root">pagurocorp.com</div>
+
+          <!-- LEVEL 1 -->
+          <div class="sm-level">
+            <div class="sm-col">
+              <a class="sm-card" data-route="sobre">
+                <span class="id">02</span>Sobre Paguro
+                <span class="desc">Filosofía del holding</span>
+              </a>
+              <div class="sm-sub">
+                <a>· Filosofía</a>
+                <a>· Método Paguro</a>
+                <a>· Cultura</a>
+                <a>· Holding</a>
+              </div>
+            </div>
+
+            <div class="sm-col">
+              <a class="sm-card" data-route="ecosistema">
+                <span class="id">03</span>Ecosistema
+                <span class="desc">Unidades de negocio</span>
+              </a>
+              <div class="sm-sub">
+                <a data-route="pagurai">▸ Pagurai</a>
+                <a data-route="pagureo">▸ Pagureo</a>
+                <a data-route="ermitano">▸ Ermitaño Pep</a>
+              </div>
+            </div>
+
+            <div class="sm-col">
+              <a class="sm-card" data-route="proyectos">
+                <span class="id">04</span>Proyectos
+                <span class="desc">Ejecución real</span>
+              </a>
+              <div class="sm-sub">
+                <a>· IA</a>
+                <a>· Commerce</a>
+                <a>· Media</a>
+                <a>· Web</a>
+                <a data-route="proyecto-detalle">▸ Detalle</a>
+              </div>
+            </div>
+
+            <div class="sm-col">
+              <a class="sm-card" data-route="casos">
+                <span class="id">05</span>Casos
+                <span class="desc">Resultados</span>
+              </a>
+              <div class="sm-sub">
+                <a>· Pagurai</a>
+                <a>· Pagureo</a>
+                <a>· Ermitaño Pep</a>
+                <a data-route="caso-detalle">▸ Detalle</a>
+              </div>
+            </div>
+
+            <div class="sm-col">
+              <a class="sm-card" data-route="insights">
+                <span class="id">06</span>Insights / Lab
+                <span class="desc">Pensamiento</span>
+              </a>
+              <div class="sm-sub">
+                <a>· IA</a>
+                <a>· Automatización</a>
+                <a>· Branding</a>
+                <a>· eCommerce</a>
+                <a>· Innovación</a>
+                <a data-route="articulo">▸ Artículo</a>
+              </div>
+            </div>
+
+            <div class="sm-col">
+              <a class="sm-card" data-route="contacto">
+                <span class="id">07</span>Contacto
+                <span class="desc">Partners · Inversión</span>
+              </a>
+              <div class="sm-sub">
+                <a>· Formulario</a>
+                <a>· Links a marcas</a>
+                <a>· Email corporativo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RELATIONSHIPS BLOCK -->
+          <div class="wf-section" style="margin-top:32px">
+            <span class="wf-section__label"><span class="num">REL</span>Relaciones entre páginas</span>
+            <span class="wf-section__note">flujo principal del visitante →</span>
+            <div class="stack stack--sm">
+              <p class="note note--orange note--arrow">Home empuja a <em>Ecosistema</em> como acción ideal.</p>
+              <p class="note note--blue note--arrow">Ecosistema → cada unidad (Pagurai / Pagureo / Ermitaño Pep).</p>
+              <p class="note note--arrow">Cada unidad → su web externa (CTA "visitar"). No reemplaza pagurai.com, pagureo.com, etc.</p>
+              <p class="note note--dim note--arrow">Proyectos y Casos cruzan transversalmente las unidades (filtrables por marca).</p>
+              <p class="note note--dim note--arrow">Insights demuestra pensamiento estratégico → soporta Contacto.</p>
+              <p class="note note--orange note--arrow">Contacto estratégico filtra partners / inversionistas / colaboradores (no formulario genérico).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============= HOME ============= -->
+    <section class="page" data-page="home" data-screen-label="01 Home">
+      <div class="page__topbar">
+        <div class="page__crumbs">FASE 01 · <span>página</span> · <em>Home</em></div>
+        <div class="page__route">/</div>
+      </div>
+      <div class="page__body">
+        <div class="page__title">
+          <h1>01 — HOME</h1>
+          <span class="id">/</span>
+        </div>
+        <p class="page__objective">Demostrar superioridad estructural en menos de 10 segundos.</p>
+
+        <div class="callout">
+          El usuario debe pensar: <strong>"Tienen un sistema empresarial muy superior."</strong> · Acción ideal → conocer las marcas del ecosistema.
+        </div>
+
+        <div class="frame">
+          <div class="frame__chrome">
+            <div class="frame__dots"><span></span><span></span><span></span></div>
+            <div class="frame__url">pagurocorp.com<em>/</em></div>
+          </div>
+
+          <!-- NAVBAR -->
+          <nav class="wf-nav">
+            <div class="wf-nav__logo">PAGURO<span>/</span>CORP</div>
+            <div class="wf-nav__items">
+              <a>Sobre Paguro</a>
+              <a class="has-drop">Ecosistema</a>
+              <a>Proyectos</a>
+              <a>Insights / Lab</a>
+              <a>Contacto</a>
+            </div>
+            <div class="wf-nav__cta">Conocer marcas →</div>
+          </nav>
+
+          <div style="padding: 22px;">
+
+            <!-- HERO -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">01</span>Hero institucional</span>
+              <span class="wf-section__note">posicionamiento + mantra</span>
+              <div class="hero-wf">
+                <span class="tag" style="align-self:flex-start">HOLDING · COLOMBIA</span>
+                <div class="lines">
+                  <div class="line title" style="width:80%;height:28px"></div>
+                  <div class="line title" style="width:60%;height:28px"></div>
+                </div>
+                <p class="note">[H1] "La arquitectura permanece. El caparazón cambia." · headline institucional</p>
+                <div class="lines">
+                  <div class="line long"></div>
+                  <div class="line med"></div>
+                </div>
+                <div class="row" style="margin-top:10px">
+                  <div class="btn btn--primary">Explorar ecosistema →</div>
+                  <div class="btn btn--ghost">Sobre Paguro</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- QUE ES -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">02</span>Qué es Paguro</span>
+              <span class="wf-section__note">explicación corta · 1 párrafo</span>
+              <div class="grid grid--2">
+                <div class="stack">
+                  <div class="line h2"></div>
+                  <div class="lines">
+                    <div class="line long"></div>
+                    <div class="line long"></div>
+                    <div class="line med"></div>
+                  </div>
+                  <p class="note note--dim">Concepto del paguro: cada marca es un caparazón. La arquitectura permanece.</p>
+                </div>
+                <div class="box box--img" style="min-height:180px">
+                  <span class="box__label">IMG · diagrama del concepto paguro</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ECOSISTEMA -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">03</span>Ecosistema de marcas</span>
+              <span class="wf-section__note">3 unit cards — preview</span>
+              <div class="grid grid--3">
+                <div class="unit-card unit-card--pagurai">
+                  <div class="unit-card__accent"></div>
+                  <span class="tag tag--pagurai"><span class="dot"></span>UNIDAD · IA</span>
+                  <div class="line title"></div>
+                  <p class="note note--dim">Pagurai · IA & automatización</p>
+                  <div class="lines"><div class="line long"></div><div class="line med"></div></div>
+                  <div style="margin-top:auto"><span class="btn btn--ghost btn--ext">pagurai.com</span></div>
+                </div>
+                <div class="unit-card unit-card--pagureo">
+                  <div class="unit-card__accent"></div>
+                  <span class="tag tag--pagureo"><span class="dot"></span>UNIDAD · COMMERCE</span>
+                  <div class="line title"></div>
+                  <p class="note note--dim">Pagureo · home office smart minimalist</p>
+                  <div class="lines"><div class="line long"></div><div class="line med"></div></div>
+                  <div style="margin-top:auto"><span class="btn btn--ghost btn--ext">pagureo.com</span></div>
+                </div>
+                <div class="unit-card unit-card--ermitano">
+                  <div class="unit-card__accent"></div>
+                  <span class="tag tag--ermitano"><span class="dot"></span>UNIDAD · MEDIA / IP</span>
+                  <div class="line title"></div>
+                  <p class="note note--dim">Ermitaño Pep · awareness narrativa</p>
+                  <div class="lines"><div class="line long"></div><div class="line med"></div></div>
+                  <div style="margin-top:auto"><span class="btn btn--ghost">Explorar contenido →</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- METODO -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">04</span>Método Paguro · resumen</span>
+              <span class="wf-section__note">4 verbos del mantra</span>
+              <div class="method">
+                <div class="method__step">
+                  <span class="method__num">01</span>
+                  <span class="method__verb">Diseñar</span>
+                  <span class="box__caption">antes de ejecutar.</span>
+                </div>
+                <div class="method__step">
+                  <span class="method__num">02</span>
+                  <span class="method__verb">Automatizar</span>
+                  <span class="box__caption">antes de contratar.</span>
+                </div>
+                <div class="method__step">
+                  <span class="method__num">03</span>
+                  <span class="method__verb">Optimizar</span>
+                  <span class="box__caption">antes de expandir.</span>
+                </div>
+                <div class="method__step">
+                  <span class="method__num">04</span>
+                  <span class="method__verb">Evolucionar</span>
+                  <span class="box__caption">antes de estancarse.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROYECTOS DESTACADOS -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">05</span>Proyectos destacados</span>
+              <span class="wf-section__note">3–4 cards · cross-unidad</span>
+              <div class="grid grid--3">
+                <div class="wf-card">
+                  <div class="wf-card__media"></div>
+                  <div class="wf-card__body">
+                    <div class="wf-card__tags">
+                      <span class="tag tag--pagurai"><span class="dot"></span>Pagurai</span>
+                      <span class="tag">IA</span>
+                    </div>
+                    <div class="line title"></div>
+                    <div class="lines"><div class="line long"></div></div>
+                    <span class="cms-pill">project.name</span>
+                  </div>
+                </div>
+                <div class="wf-card">
+                  <div class="wf-card__media"></div>
+                  <div class="wf-card__body">
+                    <div class="wf-card__tags">
+                      <span class="tag tag--pagureo"><span class="dot"></span>Pagureo</span>
+                      <span class="tag">Setup</span>
+                    </div>
+                    <div class="line title"></div>
+                    <div class="lines"><div class="line long"></div></div>
+                    <span class="cms-pill">project.name</span>
+                  </div>
+                </div>
+                <div class="wf-card">
+                  <div class="wf-card__media"></div>
+                  <div class="wf-card__body">
+                    <div class="wf-card__tags">
+                      <span class="tag tag--ermitano"><span class="dot"></span>Ermitaño Pep</span>
+                      <span class="tag">Media</span>
+                    </div>
+                    <div class="line title"></div>
+                    <div class="lines"><div class="line long"></div></div>
+                    <span class="cms-pill">project.name</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row row--end" style="margin-top:14px">
+                <span class="btn btn--ghost">Ver todos los proyectos →</span>
+              </div>
+            </div>
+
+            <!-- INSIGHTS -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">06</span>Insights recientes</span>
+              <span class="wf-section__note">3 últimos artículos del Lab</span>
+              <div class="grid grid--3">
+                <div class="box">
+                  <span class="tag">IA</span>
+                  <div class="lines" style="margin-top:10px">
+                    <div class="line title"></div>
+                    <div class="line long"></div>
+                    <div class="line med"></div>
+                  </div>
+                  <p class="note note--dim" style="margin-top:10px">Autor · Fecha</p>
+                </div>
+                <div class="box">
+                  <span class="tag">Branding</span>
+                  <div class="lines" style="margin-top:10px">
+                    <div class="line title"></div>
+                    <div class="line long"></div>
+                    <div class="line med"></div>
+                  </div>
+                  <p class="note note--dim" style="margin-top:10px">Autor · Fecha</p>
+                </div>
+                <div class="box">
+                  <span class="tag">eCommerce</span>
+                  <div class="lines" style="margin-top:10px">
+                    <div class="line title"></div>
+                    <div class="line long"></div>
+                    <div class="line med"></div>
+                  </div>
+                  <p class="note note--dim" style="margin-top:10px">Autor · Fecha</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA FINAL -->
+            <div class="wf-section">
+              <span class="wf-section__label"><span class="num">07</span>CTA final · conocer marcas</span>
+              <span class="wf-section__note">acción ideal del usuario</span>
+              <div class="close-cta">
+                <div class="stack stack--sm">
+                  <span class="box__label">CIERRE · próximo paso</span>
+                  <div class="close-cta__title">Si entendiste la lógica del paguro,</div>
+                  <div class="close-cta__hand">el siguiente paso es ver cómo se materializa en cada marca.</div>
+                </div>
+                <div class="close-cta__links">
+                  <div class="btn btn--primary">Explorar ecosistema →</div>
+                  <div class="btn btn--ghost">Ver proyectos</div>
+                  <div class="btn btn--ghost">Contacto estratégico</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FOOTER -->
+          <footer class="wf-footer">
+            <div>
+              <div class="wf-nav__logo">PAGURO<span>/</span>CORP</div>
+              <p class="note note--dim" style="margin-top:10px">Corporación Paguro SAS · Bogotá, CO</p>
+            </div>
+            <div>
+              <h6>Holding</h6>
+              <ul><li>Sobre Paguro</li><li>Filosofía</li><li>Método</li><li>Cultura</li></ul>
+            </div>
+            <div>
+              <h6>Marcas</h6>
+              <ul><li>Pagurai</li><li>Pagureo</li><li>Ermitaño Pep</li></ul>
+            </div>
+            <div>
+              <h6>Contenido</h6>
+              <ul><li>Proyectos</li><li>Casos</li><li>Insights</li></ul>
+            </div>
+            <div>
+              <h6>Legal</h6>
+              <ul><li>Contacto</li><li>Privacidad</li><li>Términos</li></ul>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- Páginas restantes incluidas vía pages.html -->
+    <div id="page-mount"></div>
+
+  </main>
+</div>
+
+<!-- Toolbar — chrome toggle -->
+<div class="toolbar">
+  <span>vista:</span>
+  <button data-toggle="chrome" class="is-on">con chrome</button>
+  <button data-toggle="annotations" class="is-on">anotaciones</button>
+  <span style="opacity:.5">·</span>
+  <span>fase 01 · low-fi</span>
+</div>
+
+<script src="pages.js"></script>
+<script src="router.js"></script>
+</body>
+</html>

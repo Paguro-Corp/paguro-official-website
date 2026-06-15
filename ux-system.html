@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Paguro Corp · UX/UI System · Fase 02</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="ux-system.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ============================================================
+       SIDEBAR
+       ============================================================ -->
+  <aside class="shell__nav">
+    <div class="brand">
+      <div class="brand__logo">PAGURO<span>/</span>CORP</div>
+      <div class="brand__phase">FASE 02 · UX/UI SYSTEM</div>
+      <div class="brand__title">System spec</div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section__title">Entrada</div>
+      <a class="nav-item" href="#overview"><span class="ix">00</span>Visión general</a>
+      <a class="nav-item" href="#principles"><span class="ix">01</span>Principios UX</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section__title">Foundations</div>
+      <a class="nav-item" href="#tokens"><span class="ix">02</span>Tokens visuales</a>
+      <a class="nav-item" href="#type"><span class="ix">03</span>Jerarquía tipográfica</a>
+      <a class="nav-item" href="#spacing"><span class="ix">04</span>Spacing & ritmo</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section__title">Layout</div>
+      <a class="nav-item" href="#layout"><span class="ix">05</span>Grid & containers</a>
+      <a class="nav-item" href="#rhythm"><span class="ix">06</span>Section rhythm</a>
+      <a class="nav-item" href="#responsive"><span class="ix">07</span>Responsive logic</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section__title">Sistema</div>
+      <a class="nav-item" href="#components"><span class="ix">08</span>Componentes</a>
+      <a class="nav-item" href="#navigation"><span class="ix">09</span>Navegación</a>
+      <a class="nav-item" href="#cms"><span class="ix">10</span>CMS · slots</a>
+      <a class="nav-item" href="#interaction"><span class="ix">11</span>Interacciones</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section__title">Ecosistema</div>
+      <a class="nav-item" href="#ecosystem"><span class="ix">12</span>Relación visual</a>
+      <a class="nav-item" href="#templates"><span class="ix">13</span>Plantillas</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section__title">Cierre</div>
+      <a class="nav-item" href="#handoff"><span class="ix">14</span>Handoff Fase 03</a>
+    </div>
+
+    <div class="nav-foot">
+      <a href="wireframes.html">← Volver a Fase 01 · Wireframes</a>
+      <a>v0.2 · spec doc</a>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       MAIN
+       ============================================================ -->
+  <main class="shell__main">
+
+    <div class="topbar">
+      <div class="topbar__crumbs">PAGURO/CORP · <span>Fase 02</span> · <em>UX/UI System Specification</em></div>
+      <div class="topbar__meta">
+        <span class="topbar__pill"><span class="dot"></span>En desarrollo</span>
+        <span class="topbar__pill">v0.2 · 2026</span>
+      </div>
+    </div>
+
+    <div class="canvas">
+
+      <!-- DOC HERO -->
+      <section class="doc-hero">
+        <div class="doc-hero__phase">Fase 02 · Sistema UX/UI</div>
+        <h1 class="doc-hero__title">El <span class="em">sistema operativo</span> de pagurocorp.com</h1>
+        <p class="doc-hero__lede">Especificación del comportamiento visual del ecosistema. Define cómo se compone, escala, navega y comunica una arquitectura empresarial moderna — sin entrar todavía en diseño visual final.</p>
+        <div class="doc-hero__meta">
+          <div><span class="k">Alcance</span> 14 capítulos</div>
+          <div><span class="k">Densidad</span> Minimal premium</div>
+          <div><span class="k">Complejidad</span> Media</div>
+          <div><span class="k">Próxima fase</span> Medium fidelity + copywriting</div>
+        </div>
+      </section>
+
+      <!-- ============= 00 · OVERVIEW ============= -->
+      <section id="overview" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 00 · Entrada</span>
+          <h2 class="chapter__title">Visión general del sistema</h2>
+          <p class="chapter__lede">Este documento define el sistema UX/UI de pagurocorp.com. No es diseño visual final: es la lógica que gobierna cómo se compone, se navega y se siente la web institucional del holding y de sus marcas-caparazón.</p>
+        </div>
+
+        <div class="toc">
+          <a class="toc__link" href="#principles"><span class="ix">01</span>Principios UX</a>
+          <a class="toc__link" href="#tokens"><span class="ix">02</span>Tokens visuales</a>
+          <a class="toc__link" href="#type"><span class="ix">03</span>Jerarquía tipográfica</a>
+          <a class="toc__link" href="#spacing"><span class="ix">04</span>Spacing & ritmo</a>
+          <a class="toc__link" href="#layout"><span class="ix">05</span>Grid & containers</a>
+          <a class="toc__link" href="#rhythm"><span class="ix">06</span>Section rhythm</a>
+          <a class="toc__link" href="#responsive"><span class="ix">07</span>Responsive logic</a>
+          <a class="toc__link" href="#components"><span class="ix">08</span>Componentes</a>
+          <a class="toc__link" href="#navigation"><span class="ix">09</span>Navegación</a>
+          <a class="toc__link" href="#cms"><span class="ix">10</span>CMS · slots</a>
+          <a class="toc__link" href="#interaction"><span class="ix">11</span>Interacciones</a>
+          <a class="toc__link" href="#ecosystem"><span class="ix">12</span>Relación visual</a>
+          <a class="toc__link" href="#templates"><span class="ix">13</span>Plantillas</a>
+          <a class="toc__link" href="#handoff"><span class="ix">14</span>Handoff Fase 03</a>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">00.A</span><span class="label">Postura del sistema</span></div>
+          <h3 class="section__title">Qué debe transmitir · qué debe evitar</h3>
+          <div class="do-grid">
+            <div class="do do--use">
+              <span class="do__tag">Sí · transmite</span>
+              <div class="do__line">Claridad, inteligencia, control, sofisticación, modularidad, estructura, percepción premium.</div>
+              <div class="do__note">Cada decisión visual debe servir a una de estas siete cualidades. Si no, se elimina.</div>
+            </div>
+            <div class="do do--avoid">
+              <span class="do__tag">No · se siente</span>
+              <div class="do__line">Agencia · startup genérica · ecommerce · corporativo tradicional · experimento gráfico.</div>
+              <div class="do__note">Evitar gradientes saturados, ilustraciones cliché, glassmorphism decorativo, slogans agresivos.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">00.B</span><span class="label">Vector de referencia</span></div>
+          <h3 class="section__title">Identidad de sistema, no de campaña</h3>
+          <p class="section__desc">El visual se alinea con <strong>interfaces editoriales modernas</strong> e <strong>institucionales premium</strong>: documentación técnica de empresas tecnológicas serias, reportes anuales editoriales, software B2B de alta gama. No con landing pages de agencia ni con campaña publicitaria.</p>
+          <div class="row">
+            <span class="kw">Editorial moderno</span>
+            <span class="kw">Modular premium</span>
+            <span class="kw">Glow tecnológico sutil</span>
+            <span class="kw">Espacio negativo</span>
+            <span class="kw">Ritmo limpio</span>
+            <span class="kw">Cards elegantes</span>
+            <span class="kw kw--no">Sin saturación</span>
+            <span class="kw kw--no">Sin clichés</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 01 · PRINCIPLES ============= -->
+      <section id="principles" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 01 · Postura</span>
+          <h2 class="chapter__title">Principios UX</h2>
+          <p class="chapter__lede">Siete principios que gobiernan cada decisión del sistema. Son el filtro contra el que se evalúa cualquier componente, layout o interacción nueva.</p>
+        </div>
+
+        <div class="principles">
+          <div class="principle">
+            <span class="principle__ix">PR · 01</span>
+            <h4 class="principle__title">Diseñar antes de ejecutar</h4>
+            <p class="principle__desc">Todo elemento del sistema responde a una pregunta estructural. Nada se decora por hábito o tendencia. La arquitectura se piensa antes de pintar.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 02</span>
+            <h4 class="principle__title">Modularidad obligatoria</h4>
+            <p class="principle__desc">Cada bloque es independiente, etiquetado y reutilizable. El sistema crece por composición, no por excepción.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 03</span>
+            <h4 class="principle__title">Espacio antes que adorno</h4>
+            <p class="principle__desc">El espacio negativo es jerarquía. Antes de añadir un borde o un degradado, se prueba si el aire resuelve el problema.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 04</span>
+            <h4 class="principle__title">Color como acento, no como ruido</h4>
+            <p class="principle__desc">La base es neutra. La marca aparece solo cuando aporta significado: identificar una unidad, marcar un acento, señalar acción.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 05</span>
+            <h4 class="principle__title">Tres unidades, un sistema</h4>
+            <p class="principle__desc">Pagurai, Pagureo y Ermitaño Pep comparten estructura. Solo cambia el acento, la voz y los datos. El visitante reconoce siempre que está dentro del holding.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 06</span>
+            <h4 class="principle__title">CMS-first, no decorativo</h4>
+            <p class="principle__desc">Todo contenido viene de un slot tipado. Si una sección no tiene contenido editable detrás, no existe. Esto previene el llenado decorativo.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 07</span>
+            <h4 class="principle__title">Movimiento con intención</h4>
+            <p class="principle__desc">Animaciones cortas (120–360ms), curvas suaves, solo cuando refuerzan jerarquía o feedback. Nunca decorativas.</p>
+          </div>
+          <div class="principle">
+            <span class="principle__ix">PR · 08</span>
+            <h4 class="principle__title">Pagurocorp no reemplaza · enruta</h4>
+            <p class="principle__desc">Cada unidad tiene su propia web. Pagurocorp es portal y mapa: presenta, contextualiza y delega. Nunca compite con pagurai.com, pagureo.com o canales de Ermitaño Pep.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 02 · TOKENS ============= -->
+      <section id="tokens" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 02 · Foundations</span>
+          <h2 class="chapter__title">Tokens visuales</h2>
+          <p class="chapter__lede">Variables base del sistema. Todo color, espacio, radio y sombra se referencia por token — nunca por valor literal. Esto permite versionar la marca sin tocar componentes.</p>
+        </div>
+
+        <!-- COLOR -->
+        <div class="section">
+          <div class="section__kicker"><span class="id">02.A</span><span class="label">Color · superficies</span></div>
+          <h3 class="section__title">Sistema neutro · base institucional</h3>
+          <p class="section__desc">Negros progresivos que generan profundidad sin contraste agresivo. Toda página descansa en estas superficies; el color de marca aparece solo en acentos.</p>
+          <div class="token-row">
+            <div class="tok"><div class="tok__chip" style="background:#0a0b0d"></div><div class="tok__meta"><span class="tok__name">--bg</span><span class="tok__val">#0A0B0D</span><span class="tok__role">Surface base</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#111317"></div><div class="tok__meta"><span class="tok__name">--bg-2</span><span class="tok__val">#111317</span><span class="tok__role">Card · panel</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#181b21"></div><div class="tok__meta"><span class="tok__name">--bg-3</span><span class="tok__val">#181B21</span><span class="tok__role">Hover · header</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#1f232b"></div><div class="tok__meta"><span class="tok__name">--bg-4</span><span class="tok__val">#1F232B</span><span class="tok__role">Inset · field</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#232830"></div><div class="tok__meta"><span class="tok__name">--line</span><span class="tok__val">#232830</span><span class="tok__role">Border default</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#3d4452"></div><div class="tok__meta"><span class="tok__name">--line-3</span><span class="tok__val">#3D4452</span><span class="tok__role">Border hover</span></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">02.B</span><span class="label">Color · tinta</span></div>
+          <h3 class="section__title">Escala tipográfica de contraste</h3>
+          <p class="section__desc">Cuatro niveles de tinta gobiernan toda la jerarquía de texto. <code>--ink</code> para títulos y datos críticos, <code>--ink-4</code> para metadatos y labels mono.</p>
+          <table class="tbl">
+            <thead><tr><th>Token</th><th>Valor</th><th>Rol</th><th>Contraste sobre --bg</th></tr></thead>
+            <tbody>
+              <tr><td><span class="swatch" style="background:#e6e8ec"></span>--ink</td><td class="val">#E6E8EC</td><td class="role">Títulos · datos · acciones</td><td class="role">15.8 : 1 · AAA</td></tr>
+              <tr><td><span class="swatch" style="background:#b6bac2"></span>--ink-2</td><td class="val">#B6BAC2</td><td class="role">Texto cuerpo</td><td class="role">9.4 : 1 · AAA</td></tr>
+              <tr><td><span class="swatch" style="background:#7e848f"></span>--ink-3</td><td class="val">#7E848F</td><td class="role">Texto secundario</td><td class="role">4.8 : 1 · AA</td></tr>
+              <tr><td><span class="swatch" style="background:#555a64"></span>--ink-4</td><td class="val">#555A64</td><td class="role">Labels mono · captions</td><td class="role">3.1 : 1 · AA Large</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">02.C</span><span class="label">Color · marca</span></div>
+          <h3 class="section__title">Acentos institucionales</h3>
+          <p class="section__desc">Cinco acentos. Cada unidad se identifica con uno; el naranja es el color institucional de Paguro Corp. Disciplina: nunca llenan superficies grandes, solo bordes, dots, hovers, focus, y glow muy sutil.</p>
+          <div class="token-row">
+            <div class="tok"><div class="tok__chip" style="background:#000"></div><div class="tok__meta"><span class="tok__name">--c-black</span><span class="tok__val">#000000</span><span class="tok__role">Holding · contraste</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#ee7224"></div><div class="tok__meta"><span class="tok__name">--c-orange</span><span class="tok__val">#EE7224</span><span class="tok__role">Pagurocorp · Pagureo</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#0360ab"></div><div class="tok__meta"><span class="tok__name">--c-blue</span><span class="tok__val">#0360AB</span><span class="tok__role">Pagurai</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#e72175"></div><div class="tok__meta"><span class="tok__name">--c-pink</span><span class="tok__val">#E72175</span><span class="tok__role">Ermitaño Pep</span></div></div>
+            <div class="tok"><div class="tok__chip" style="background:#c01c83"></div><div class="tok__meta"><span class="tok__name">--c-fuchsia</span><span class="tok__val">#C01C83</span><span class="tok__role">Apoyo · editorial</span></div></div>
+          </div>
+
+          <div class="callout">
+            <span class="callout__icon">REGLA</span>
+            <div class="callout__body">
+              <div class="callout__title">El color tiene cargo, no decora.</div>
+              <div class="callout__text">Usar el acento solo cuando: (1) identifica una unidad, (2) marca un foco de acción, (3) señala estado/activo, (4) crea glow tecnológico sutil. Nunca como fondo de bloque grande, nunca en gradientes saturados, nunca dos acentos compitiendo en la misma sección.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RADII + SHADOWS -->
+        <div class="section">
+          <div class="section__kicker"><span class="id">02.D</span><span class="label">Radii & elevation</span></div>
+          <h3 class="section__title">Geometría suave · elevación mínima</h3>
+          <div class="grid-2">
+            <div class="spec">
+              <div class="spec__head"><span class="l">Radii</span><span>--r-*</span></div>
+              <div class="spec__body">
+                <table class="tbl">
+                  <tbody>
+                    <tr><td>--r-xs</td><td class="val">2px</td><td class="role">Pills mono · campos</td></tr>
+                    <tr><td>--r-sm</td><td class="val">4px</td><td class="role">Botones · chips · cards estructurales</td></tr>
+                    <tr><td>--r-md</td><td class="val">8px</td><td class="role">Cards de contenido · paneles</td></tr>
+                    <tr><td>--r-lg</td><td class="val">14px</td><td class="role">Frames · modales</td></tr>
+                    <tr><td>--r-full</td><td class="val">999px</td><td class="role">Tags · avatares</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Elevation / glow</span><span>--shadow-*</span></div>
+              <div class="spec__body" style="display:flex;flex-direction:column;gap:14px">
+                <div style="padding:14px;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-1)"><span class="mono">--shadow-1</span> · cards en reposo</div>
+                <div style="padding:14px;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--shadow-2)"><span class="mono">--shadow-2</span> · hover · paneles flotantes</div>
+                <div style="padding:14px;background:var(--bg-2);border:1px solid rgba(238,114,36,.4);border-radius:var(--r-md);box-shadow:var(--glow-orange)"><span class="mono">--glow-orange</span> · acento institucional</div>
+                <div style="padding:14px;background:var(--bg-2);border:1px solid rgba(3,96,171,.4);border-radius:var(--r-md);box-shadow:var(--glow-blue)"><span class="mono">--glow-blue</span> · Pagurai</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOTION -->
+        <div class="section">
+          <div class="section__kicker"><span class="id">02.E</span><span class="label">Motion</span></div>
+          <h3 class="section__title">Curvas y duraciones</h3>
+          <p class="section__desc">Una sola curva (<code>--ease-out</code>) gobierna todo el sistema. Tres duraciones cubren el 95% de los casos: feedback (120ms), transición (220ms), entrada (360ms).</p>
+          <table class="tbl">
+            <thead><tr><th>Token</th><th>Valor</th><th>Uso</th></tr></thead>
+            <tbody>
+              <tr><td>--ease-out</td><td class="val">cubic-bezier(.16, 1, .3, 1)</td><td class="role">Curva única del sistema</td></tr>
+              <tr><td>--dur-1</td><td class="val">120ms</td><td class="role">Hover · focus · toggle inmediato</td></tr>
+              <tr><td>--dur-2</td><td class="val">220ms</td><td class="role">Cambio de sección · panel</td></tr>
+              <tr><td>--dur-3</td><td class="val">360ms</td><td class="role">Aparición de contenido · scroll-in</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============= 03 · TYPE ============= -->
+      <section id="type" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 03 · Foundations</span>
+          <h2 class="chapter__title">Jerarquía tipográfica</h2>
+          <p class="chapter__lede">Tres familias con roles muy distintos. Inter para todo lo institucional, JetBrains Mono para datos y metadata del sistema, Kalam (handwritten) como acento humano puntual — nunca dominante.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">03.A</span><span class="label">Familias</span></div>
+          <h3 class="section__title">Tres familias · tres roles</h3>
+          <div class="grid-3">
+            <div class="spec">
+              <div class="spec__head"><span class="l">Sans · institucional</span><span>Inter</span></div>
+              <div class="spec__body" style="font-family:var(--font-sans)">
+                <div style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1.1">El sistema</div>
+                <div style="font-size:14px;color:var(--ink-2);margin-top:8px;line-height:1.6">Para todo el contenido institucional: títulos, cuerpo, navegación, acciones, copy general.</div>
+              </div>
+              <div class="spec__foot">
+                <span class="spec__note"><span class="k">Pesos</span> <span class="v">400 · 500 · 600 · 700</span></span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Mono · sistema</span><span>JetBrains Mono</span></div>
+              <div class="spec__body" style="font-family:var(--font-mono)">
+                <div style="font-size:28px;font-weight:500;letter-spacing:0.02em;line-height:1.15">CMS · 02.B</div>
+                <div style="font-size:14px;color:var(--ink-2);margin-top:8px;line-height:1.6">Para metadata: labels, IDs, rutas, tokens CMS, números técnicos, badges del sistema.</div>
+              </div>
+              <div class="spec__foot">
+                <span class="spec__note"><span class="k">Pesos</span> <span class="v">400 · 500 · 700</span></span>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Hand · acento humano</span><span>Kalam</span></div>
+              <div class="spec__body" style="font-family:var(--font-hand)">
+                <div style="font-size:24px;line-height:1.3;color:var(--c-orange)">la arquitectura permanece</div>
+                <div style="font-family:var(--font-sans);font-size:14px;color:var(--ink-2);margin-top:8px;line-height:1.6">Solo para acentos editoriales puntuales: pull-quotes, mantras, anotaciones humanas. Máx. 1–2 apariciones por página.</div>
+              </div>
+              <div class="spec__foot">
+                <span class="spec__note"><span class="k">Pesos</span> <span class="v">400 · 700</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">03.B</span><span class="label">Escala</span></div>
+          <h3 class="section__title">Type scale</h3>
+          <p class="section__desc">Escala modular basada en 14px. Pensada para densidad media — más generosa que un dashboard, más densa que una landing comercial.</p>
+          <div class="spec">
+            <div class="spec__body">
+              <div class="type-row">
+                <div class="meta"><span class="name">Display</span>type.display</div>
+                <div class="sample" style="font-size:56px;font-weight:700;letter-spacing:-0.03em;line-height:1">Holding superior</div>
+                <div class="spec">56 / 1.00 / -3% · 700</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">H1</span>type.h1</div>
+                <div class="sample" style="font-size:44px;font-weight:700;letter-spacing:-0.025em;line-height:1.05">Arquitectura empresarial</div>
+                <div class="spec">44 / 1.05 / -2.5% · 700</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">H2</span>type.h2</div>
+                <div class="sample" style="font-size:32px;font-weight:600;letter-spacing:-0.02em;line-height:1.15">Sistema operativo del ecosistema</div>
+                <div class="spec">32 / 1.15 / -2% · 600</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">H3</span>type.h3</div>
+                <div class="sample" style="font-size:22px;font-weight:500;letter-spacing:-0.01em;line-height:1.25">Sección dentro de capítulo</div>
+                <div class="spec">22 / 1.25 / -1% · 500</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">H4</span>type.h4</div>
+                <div class="sample" style="font-size:17px;font-weight:600;line-height:1.3">Title de card</div>
+                <div class="spec">17 / 1.30 / 0 · 600</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">Body L</span>type.body-l</div>
+                <div class="sample" style="font-size:16px;font-weight:400;line-height:1.6;color:var(--ink-2)">Texto lede o introducción de capítulo. Generoso, cómodo de leer en pantalla.</div>
+                <div class="spec">16 / 1.60 / 0 · 400</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">Body</span>type.body</div>
+                <div class="sample" style="font-size:14px;font-weight:400;line-height:1.6;color:var(--ink-2)">Texto base del sistema. Cuerpo general, descripciones de cards, párrafos editoriales.</div>
+                <div class="spec">14 / 1.60 / 0 · 400</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">Body S</span>type.body-s</div>
+                <div class="sample" style="font-size:12.5px;font-weight:400;line-height:1.55;color:var(--ink-3)">Texto secundario · meta de cards · captions.</div>
+                <div class="spec">12.5 / 1.55 / 0 · 400</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">Mono L</span>type.mono-l</div>
+                <div class="sample" style="font-family:var(--font-mono);font-size:13px;color:var(--ink-2)">project.name · pagurai.com</div>
+                <div class="spec">Mono · 13 / 1.50</div>
+              </div>
+              <div class="type-row">
+                <div class="meta"><span class="name">Label</span>type.label</div>
+                <div class="sample" style="font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;color:var(--ink-3);text-transform:uppercase">SECCIÓN · 02 · TOKENS</div>
+                <div class="spec">Mono · 10 / 1.40 / +12% · UPPER</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">03.C</span><span class="label">Aplicación · jerarquía en uso</span></div>
+          <h3 class="section__title">Cómo conviven en una sección</h3>
+          <div class="hier">
+            <span class="eyebrow">Capítulo 04 · Foundations</span>
+            <h1>Spacing & ritmo</h1>
+            <p>Sistema de espaciado base 4px. Toda decisión de margin/padding/gap referencia un token. Esto garantiza que el ritmo vertical sea consistente entre páginas.</p>
+            <span class="label">04.A · Escala</span>
+            <h2>Doce pasos · una sola unidad base</h2>
+            <p>Empezamos en 4px y multiplicamos. La escala favorece números pares: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128.</p>
+            <h3>Aplicación dentro de cards</h3>
+            <div class="quote-hand">"El espacio no se rellena; se gana."</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 04 · SPACING ============= -->
+      <section id="spacing" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 04 · Foundations</span>
+          <h2 class="chapter__title">Spacing & ritmo</h2>
+          <p class="chapter__lede">Escala de espacio en base 4. El sistema favorece múltiplos pares y respeta el ritmo vertical entre secciones para reforzar la modularidad.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">04.A</span><span class="label">Spacing scale</span></div>
+          <h3 class="section__title">Tokens de espaciado</h3>
+          <div class="spec">
+            <div class="spec__body">
+              <div class="ruler">
+                <div class="ruler__row"><span class="name">--s-1</span><div class="ruler__bar" style="width:4px"></div><span class="val">4px</span></div>
+                <div class="ruler__row"><span class="name">--s-2</span><div class="ruler__bar" style="width:8px"></div><span class="val">8px</span></div>
+                <div class="ruler__row"><span class="name">--s-3</span><div class="ruler__bar" style="width:12px"></div><span class="val">12px</span></div>
+                <div class="ruler__row"><span class="name">--s-4</span><div class="ruler__bar" style="width:16px"></div><span class="val">16px</span></div>
+                <div class="ruler__row"><span class="name">--s-6</span><div class="ruler__bar" style="width:24px"></div><span class="val">24px</span></div>
+                <div class="ruler__row"><span class="name">--s-8</span><div class="ruler__bar" style="width:32px"></div><span class="val">32px</span></div>
+                <div class="ruler__row"><span class="name">--s-12</span><div class="ruler__bar" style="width:48px"></div><span class="val">48px</span></div>
+                <div class="ruler__row"><span class="name">--s-16</span><div class="ruler__bar" style="width:64px"></div><span class="val">64px</span></div>
+                <div class="ruler__row"><span class="name">--s-20</span><div class="ruler__bar" style="width:80px"></div><span class="val">80px</span></div>
+                <div class="ruler__row"><span class="name">--s-24</span><div class="ruler__bar" style="width:96px"></div><span class="val">96px</span></div>
+                <div class="ruler__row"><span class="name">--s-32</span><div class="ruler__bar" style="width:128px"></div><span class="val">128px</span></div>
+              </div>
+            </div>
+            <div class="spec__foot">
+              <span class="spec__note"><span class="k">Base</span> <span class="v">4px</span></span>
+              <span class="spec__note"><span class="k">Densidad</span> <span class="v">Minimal premium · gap por defecto en cards = --s-3 (12px)</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">04.B</span><span class="label">Aplicación</span></div>
+          <h3 class="section__title">Reglas de uso</h3>
+          <table class="tbl">
+            <thead><tr><th>Contexto</th><th>Token</th><th>Notas</th></tr></thead>
+            <tbody>
+              <tr><td>Inline group (tags, dots, breadcrumbs)</td><td class="val">--s-2 · 8px</td><td class="role">Lectura horizontal natural</td></tr>
+              <tr><td>Stack interno de card</td><td class="val">--s-3 · 12px</td><td class="role">Lo apretado conserva personalidad de bloque</td></tr>
+              <tr><td>Padding interno de card</td><td class="val">--s-5 · 20px</td><td class="role">Generosidad media</td></tr>
+              <tr><td>Padding de panel/frame</td><td class="val">--s-6 · 24px</td><td class="role">Respiración institucional</td></tr>
+              <tr><td>Gap entre cards en grid</td><td class="val">--s-4 · 16px</td><td class="role">Modular sin sentirse despegado</td></tr>
+              <tr><td>Gap entre secciones dentro de página</td><td class="val">--s-16 · 64px</td><td class="role">Ritmo vertical claro</td></tr>
+              <tr><td>Gap entre capítulos / heroes</td><td class="val">--s-24 · 96px</td><td class="role">Cambio de unidad narrativa</td></tr>
+              <tr><td>Margen lateral página (desktop ≥1280)</td><td class="val">--s-16 · 64px</td><td class="role">Canvas + max-width interno</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============= 05 · LAYOUT ============= -->
+      <section id="layout" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 05 · Layout</span>
+          <h2 class="chapter__title">Grid & containers</h2>
+          <p class="chapter__lede">Sistema modular de 12 columnas. El grid es la columna vertebral; todo bloque, hero o galería se compone alineándose a él.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">05.A</span><span class="label">Grid</span></div>
+          <h3 class="section__title">12 columnas · gap 24px</h3>
+          <p class="section__desc">El grid maestro tiene 12 columnas con gap de 24px en desktop. Sub-grids derivan de él. Cualquier elemento mayor a 1 unidad ocupa un múltiplo entero de columnas.</p>
+          <div class="grid-demo">
+            <div class="block">1</div><div class="block">2</div><div class="block">3</div><div class="block">4</div>
+            <div class="block">5</div><div class="block">6</div><div class="block">7</div><div class="block">8</div>
+            <div class="block">9</div><div class="block">10</div><div class="block">11</div><div class="block">12</div>
+            <div class="block is-accent" style="grid-column: span 8">spotlight · span 8</div>
+            <div class="block" style="grid-column: span 4">aside · span 4</div>
+            <div class="block" style="grid-column: span 4">card · 4</div>
+            <div class="block" style="grid-column: span 4">card · 4</div>
+            <div class="block" style="grid-column: span 4">card · 4</div>
+          </div>
+          <div class="callout">
+            <span class="callout__icon">REGLA</span>
+            <div class="callout__body">
+              <div class="callout__title">Nunca columnas impares en bloque ≥ 6.</div>
+              <div class="callout__text">Las particiones permitidas son 12 · 8+4 · 6+6 · 4+4+4 · 3+3+3+3. Cualquier otra disposición rompe la rejilla y debilita la lectura institucional.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">05.B</span><span class="label">Containers</span></div>
+          <h3 class="section__title">Anchos máximos del canvas</h3>
+          <p class="section__desc">Tres anchos máximos cubren todos los tipos de contenido. El sistema nunca usa "fluid 100%" en desktop: la mancha de texto está controlada.</p>
+          <div class="container-stack">
+            <div class="container-row"><span class="name">narrow · texto</span><div class="bar" style="width:55%" data-w="680 px · max-width de lectura"></div></div>
+            <div class="container-row"><span class="name">default · sistema</span><div class="bar" style="width:82%" data-w="1100 px · contenedor principal"></div></div>
+            <div class="container-row"><span class="name">wide · galería</span><div class="bar" style="width:96%" data-w="1280 px · proyectos · spotlights"></div></div>
+            <div class="container-row"><span class="name">full · hero institucional</span><div class="bar" style="width:100%" data-w="100% · solo heroes editoriales"></div></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">05.C</span><span class="label">Composición tipo</span></div>
+          <h3 class="section__title">Cuatro composiciones canónicas</h3>
+          <p class="section__desc">Toda página del sistema se compone usando una de estas cuatro plantillas de fila. Si una sección no encaja, primero se reformula el contenido, no se inventa una columna nueva.</p>
+          <div class="grid-2">
+            <div class="spec">
+              <div class="spec__head"><span class="l">Editorial · 8 + 4</span><span>spotlight</span></div>
+              <div class="spec__body">
+                <div class="grid-demo" style="min-height:130px">
+                  <div class="block is-accent" style="grid-column:span 8">contenido principal</div>
+                  <div class="block" style="grid-column:span 4">aside · meta</div>
+                </div>
+              </div>
+              <div class="spec__foot"><span class="spec__note">Hero · artículo destacado · proyecto featured</span></div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Simétrico · 6 + 6</span><span>diálogo</span></div>
+              <div class="spec__body">
+                <div class="grid-demo" style="min-height:130px">
+                  <div class="block" style="grid-column:span 6">bloque A</div>
+                  <div class="block" style="grid-column:span 6">bloque B</div>
+                </div>
+              </div>
+              <div class="spec__foot"><span class="spec__note">Qué es · rol · diagrama+texto · CTA dual</span></div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Modular · 4 + 4 + 4</span><span>ecosistema</span></div>
+              <div class="spec__body">
+                <div class="grid-demo" style="min-height:130px">
+                  <div class="block" style="grid-column:span 4">unidad A</div>
+                  <div class="block" style="grid-column:span 4">unidad B</div>
+                  <div class="block" style="grid-column:span 4">unidad C</div>
+                </div>
+              </div>
+              <div class="spec__foot"><span class="spec__note">Ecosistema · método · valores · proyectos cross</span></div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Denso · 3 + 3 + 3 + 3</span><span>grid</span></div>
+              <div class="spec__body">
+                <div class="grid-demo" style="min-height:130px">
+                  <div class="block" style="grid-column:span 3">card</div>
+                  <div class="block" style="grid-column:span 3">card</div>
+                  <div class="block" style="grid-column:span 3">card</div>
+                  <div class="block" style="grid-column:span 3">card</div>
+                </div>
+              </div>
+              <div class="spec__foot"><span class="spec__note">Insights · proyectos · KPIs · métodos</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 06 · RHYTHM ============= -->
+      <section id="rhythm" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 06 · Layout</span>
+          <h2 class="chapter__title">Section rhythm</h2>
+          <p class="chapter__lede">Una página = una secuencia de secciones de tres tipos. La cadencia entre ellas comunica institucionalidad sin necesidad de animación.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">06.A</span><span class="label">Tipos de sección</span></div>
+          <h3 class="section__title">Tres alturas · tres roles</h3>
+          <div class="grid-3">
+            <div class="spec">
+              <div class="spec__head"><span class="l">Hero</span><span>type.hero</span></div>
+              <div class="spec__body"><div class="rhythm" style="border:none"><div class="rhythm__sec" style="--gap:80px"><span class="rhythm__tag">hero · 80 / 80</span><div class="h">Título institucional</div><div class="l long"></div><div class="l med"></div></div></div></div>
+              <div class="spec__foot"><span class="spec__note"><span class="k">Padding-Y</span> <span class="v">80–120 px</span></span></div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Standard</span><span>type.standard</span></div>
+              <div class="spec__body"><div class="rhythm" style="border:none"><div class="rhythm__sec" style="--gap:48px"><span class="rhythm__tag">std · 48 / 48</span><div class="h">Sección regular</div><div class="l long"></div><div class="l med"></div></div></div></div>
+              <div class="spec__foot"><span class="spec__note"><span class="k">Padding-Y</span> <span class="v">48–64 px</span></span></div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Compact</span><span>type.compact</span></div>
+              <div class="spec__body"><div class="rhythm" style="border:none"><div class="rhythm__sec" style="--gap:24px"><span class="rhythm__tag">cmp · 24 / 24</span><div class="h">Bloque corto</div><div class="l short"></div></div></div></div>
+              <div class="spec__foot"><span class="spec__note"><span class="k">Padding-Y</span> <span class="v">24–32 px</span></span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">06.B</span><span class="label">Cadencia tipo</span></div>
+          <h3 class="section__title">Patrón rítmico recomendado</h3>
+          <p class="section__desc">El patrón H–S–S–H–S–C es el ritmo institucional canónico. Genera respiración sin perder densidad. Alternar Hero–Standard evita la sensación de página plana.</p>
+          <div class="rhythm">
+            <div class="rhythm__sec" style="--gap:72px"><span class="rhythm__tag">HERO</span><div class="h">Hero institucional</div><div class="l long"></div><div class="l med"></div></div>
+            <div class="rhythm__sec" style="--gap:48px"><span class="rhythm__tag">STANDARD</span><div class="h">Qué es Paguro</div><div class="l long"></div></div>
+            <div class="rhythm__sec" style="--gap:48px"><span class="rhythm__tag">STANDARD</span><div class="h">Ecosistema · 3 unidades</div><div class="l long"></div></div>
+            <div class="rhythm__sec" style="--gap:72px"><span class="rhythm__tag">HERO · alt</span><div class="h">Manifiesto editorial</div><div class="l med"></div></div>
+            <div class="rhythm__sec" style="--gap:48px"><span class="rhythm__tag">STANDARD</span><div class="h">Proyectos destacados</div><div class="l long"></div></div>
+            <div class="rhythm__sec" style="--gap:28px"><span class="rhythm__tag">COMPACT</span><div class="h">Cierre · CTA</div><div class="l short"></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 07 · RESPONSIVE ============= -->
+      <section id="responsive" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 07 · Layout</span>
+          <h2 class="chapter__title">Responsive logic</h2>
+          <p class="chapter__lede">Cuatro breakpoints. Cambios estructurales claros, no escalado lineal. Cada breakpoint redefine el grid y el comportamiento de navegación.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">07.A</span><span class="label">Breakpoints</span></div>
+          <h3 class="section__title">Cuatro puntos de quiebre</h3>
+          <table class="tbl">
+            <thead><tr><th>Token</th><th>Ancho</th><th>Grid</th><th>Margen lateral</th><th>Nav</th></tr></thead>
+            <tbody>
+              <tr><td>--bp-xs · mobile</td><td class="val">≤ 640 px</td><td class="role">4 cols · gap 16</td><td class="role">20 px</td><td class="role">Drawer · hamburger</td></tr>
+              <tr><td>--bp-sm · tablet</td><td class="val">641 – 1024</td><td class="role">8 cols · gap 20</td><td class="role">32 px</td><td class="role">Drawer · hamburger</td></tr>
+              <tr><td>--bp-md · desktop</td><td class="val">1025 – 1440</td><td class="role">12 cols · gap 24</td><td class="role">48 px</td><td class="role">Inline · sticky</td></tr>
+              <tr><td>--bp-lg · wide</td><td class="val">≥ 1441</td><td class="role">12 cols · gap 24 · canvas centrado</td><td class="role">auto · max 1280</td><td class="role">Inline · sticky</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">07.B</span><span class="label">Comportamiento</span></div>
+          <h3 class="section__title">Cómo colapsan los bloques</h3>
+          <div class="vps">
+            <div class="vp">
+              <div class="vp__head"><span class="name">Desktop · ≥ 1025</span><span>12 cols</span></div>
+              <div class="vp__body">
+                <div class="vp__nav"><span>PAGURO/CORP</span><span>Nav inline · 5 items</span></div>
+                <div class="vp__row">
+                  <div class="vp__b is-accent" style="flex:2"></div>
+                  <div class="vp__b"></div>
+                </div>
+                <div class="vp__row">
+                  <div class="vp__b"></div>
+                  <div class="vp__b"></div>
+                  <div class="vp__b"></div>
+                </div>
+                <div class="vp__row">
+                  <div class="vp__b"></div>
+                  <div class="vp__b"></div>
+                  <div class="vp__b"></div>
+                  <div class="vp__b"></div>
+                </div>
+              </div>
+            </div>
+            <div class="vp">
+              <div class="vp__head"><span class="name">Mobile · ≤ 640</span><span>4 cols</span></div>
+              <div class="vp__body">
+                <div class="vp__nav"><span>PAGURO/CORP</span><div class="ham"></div></div>
+                <div class="vp__row"><div class="vp__b is-accent"></div></div>
+                <div class="vp__row"><div class="vp__b"></div></div>
+                <div class="vp__row"><div class="vp__b"></div></div>
+                <div class="vp__row"><div class="vp__b"></div></div>
+                <div class="vp__row"><div class="vp__b"></div></div>
+                <div class="vp__row"><div class="vp__b"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">07.C</span><span class="label">Reglas críticas</span></div>
+          <h3 class="section__title">Mobile no es desktop comprimido</h3>
+          <div class="do-grid">
+            <div class="do do--use">
+              <span class="do__tag">Sí</span>
+              <div class="do__line">En mobile, las cards van a 1 columna. Los heroes mantienen ratio textual pero reducen tamaños de display a H1 (44 → 32).</div>
+              <div class="do__note">El ritmo vertical se mantiene; solo se acortan paddings de hero (80 → 48).</div>
+            </div>
+            <div class="do do--avoid">
+              <span class="do__tag">No</span>
+              <div class="do__line">Reducir 4 columnas a 2 sin reordenar. Encoger H1 manteniendo el mismo letter-spacing. Mantener navbar inline en pantallas &lt; 1024.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 08 · COMPONENTS ============= -->
+      <section id="components" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 08 · Sistema</span>
+          <h2 class="chapter__title">Componentes</h2>
+          <p class="chapter__lede">Arquitectura del componente. Cada uno tiene anatomía, variantes, estados e integración CMS definidas. Aquí van las decisiones que aplican transversalmente; los componentes individuales viven en la biblioteca de Fase 01.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">08.A</span><span class="label">Familias</span></div>
+          <h3 class="section__title">Cinco familias · todo el sistema</h3>
+          <div class="grid-2">
+            <div class="principle">
+              <span class="principle__ix">FAM · 01</span>
+              <h4 class="principle__title">Structure</h4>
+              <p class="principle__desc">Navbar · footer · breadcrumbs · page-nav · sidebar. Definen cómo el visitante se ubica.</p>
+            </div>
+            <div class="principle">
+              <span class="principle__ix">FAM · 02</span>
+              <h4 class="principle__title">Surface</h4>
+              <p class="principle__desc">Card · spotlight · unit-card · panel · ext-cta. Contenedores con jerarquía propia.</p>
+            </div>
+            <div class="principle">
+              <span class="principle__ix">FAM · 03</span>
+              <h4 class="principle__title">Editorial</h4>
+              <p class="principle__desc">Hero · manifesto · quote · timeline · matrix · faq. Cargan contenido institucional.</p>
+            </div>
+            <div class="principle">
+              <span class="principle__ix">FAM · 04</span>
+              <h4 class="principle__title">Data</h4>
+              <p class="principle__desc">KPI · stat-row · tag · author · cms-pill · filter-bar. Datos del ecosistema y meta.</p>
+            </div>
+            <div class="principle">
+              <span class="principle__ix">FAM · 05</span>
+              <h4 class="principle__title">Action</h4>
+              <p class="principle__desc">Button · close-cta · newsletter · field. Conduce al siguiente paso.</p>
+            </div>
+            <div class="principle">
+              <span class="principle__ix">FAM · ext</span>
+              <h4 class="principle__title">External link · enrutador</h4>
+              <p class="principle__desc">Componente especial: cualquier acción hacia pagurai.com, pagureo.com o canales de Ermitaño Pep usa la variante <code>btn--ext</code> + dom visible. Imposible confundir con acción interna.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">08.B</span><span class="label">Anatomía</span></div>
+          <h3 class="section__title">Anatomía estándar de una card</h3>
+          <p class="section__desc">Toda card del sistema (project · case · insight · unit) comparte cinco zonas. Si una zona no aplica se omite, no se decora.</p>
+          <div class="grid-2">
+            <div class="card">
+              <div class="card__media"></div>
+              <div class="card__body">
+                <div class="card__tags">
+                  <span class="tag tag--pagurai"><span class="dot"></span>Pagurai</span>
+                  <span class="tag">IA</span>
+                </div>
+                <div class="card__title">Título del contenido · una línea o dos máximo</div>
+                <div class="card__desc">Descripción breve. Dos líneas como tope. No usar para resumen ejecutivo — para eso está la página de detalle.</div>
+                <div class="row" style="margin-top:6px">
+                  <span class="mono">project.fecha</span>
+                  <span class="mono" style="margin-left:auto">project.estado</span>
+                </div>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Zonas</span><span>card.anatomy</span></div>
+              <div class="spec__body" style="display:flex;flex-direction:column;gap:10px">
+                <div><span class="mono" style="color:var(--c-orange)">01 · MEDIA</span> <span style="color:var(--ink-2)">— imagen, video, diagrama. 16:10 fijo. Sin texto sobreimpreso.</span></div>
+                <div><span class="mono" style="color:var(--c-orange)">02 · TAGS</span> <span style="color:var(--ink-2)">— unidad + categoría. Máx 2 tags visibles en lista.</span></div>
+                <div><span class="mono" style="color:var(--c-orange)">03 · TITLE</span> <span style="color:var(--ink-2)">— H4 · 17/1.3 · 1–2 líneas. No truncar con elipsis si excede.</span></div>
+                <div><span class="mono" style="color:var(--c-orange)">04 · DESC</span> <span style="color:var(--ink-2)">— body-s · 2 líneas tope.</span></div>
+                <div><span class="mono" style="color:var(--c-orange)">05 · META</span> <span style="color:var(--ink-2)">— fila inferior con mono · CMS pills · fecha · estado.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">08.C</span><span class="label">Estados</span></div>
+          <h3 class="section__title">Cinco estados base · todos los interactivos</h3>
+          <div class="states">
+            <div class="state">
+              <span class="state__label">Default</span>
+              <span class="btn">Acción</span>
+              <span class="btn btn--primary">Primaria</span>
+            </div>
+            <div class="state">
+              <span class="state__label">Hover</span>
+              <span class="btn" style="border-color:var(--ink-3);background:var(--bg-3)">Acción</span>
+              <span class="btn btn--primary" style="background:#fff">Primaria</span>
+            </div>
+            <div class="state">
+              <span class="state__label">Focus</span>
+              <span class="btn" style="box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--c-orange)">Acción</span>
+              <span class="btn btn--primary" style="box-shadow:0 0 0 2px var(--bg), 0 0 0 4px var(--c-orange)">Primaria</span>
+            </div>
+            <div class="state">
+              <span class="state__label">Disabled</span>
+              <span class="btn" style="opacity:.4;cursor:not-allowed">Acción</span>
+              <span class="btn btn--primary" style="opacity:.4;cursor:not-allowed">Primaria</span>
+            </div>
+            <div class="state">
+              <span class="state__label">Loading</span>
+              <span class="btn"><span style="display:inline-block;width:10px;height:10px;border:1.5px solid var(--ink-3);border-top-color:transparent;border-radius:50%;animation:spin 1s linear infinite"></span> Acción</span>
+              <span class="btn btn--primary"><span style="display:inline-block;width:10px;height:10px;border:1.5px solid var(--c-black);border-top-color:transparent;border-radius:50%;animation:spin 1s linear infinite"></span> Primaria</span>
+            </div>
+          </div>
+          <style>@keyframes spin{to{transform:rotate(360deg)}}</style>
+          <div class="callout">
+            <span class="callout__icon">FOCUS</span>
+            <div class="callout__body">
+              <div class="callout__title">El focus ring siempre usa naranja institucional.</div>
+              <div class="callout__text">Doble outline: 2px transparente del color de superficie + 2px del acento. Accesible WCAG AA y consistente entre páginas claras/oscuras.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">08.D</span><span class="label">Variantes de acción</span></div>
+          <h3 class="section__title">Botones · jerarquía clara</h3>
+          <div class="spec">
+            <div class="spec__body" style="display:flex;flex-wrap:wrap;gap:14px;align-items:center">
+              <button class="btn btn--brand">Acción institucional <span class="arr">→</span></button>
+              <button class="btn btn--primary">Primaria neutra <span class="arr">→</span></button>
+              <button class="btn">Secundaria</button>
+              <button class="btn btn--ghost">Terciaria</button>
+              <button class="btn btn--ext">visitar pagurai.com</button>
+              <button class="btn btn--sm">Acción pequeña</button>
+            </div>
+            <div class="spec__foot">
+              <span class="spec__note"><span class="k">Regla</span> <span class="v">Una sola acción brand por sección · jerarquía siempre escalonada</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 09 · NAVIGATION ============= -->
+      <section id="navigation" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 09 · Sistema</span>
+          <h2 class="chapter__title">Navegación</h2>
+          <p class="chapter__lede">Navbar minimal premium, dropdown del ecosistema con preview, breadcrumbs en detalles, page-nav sticky en páginas largas. La navegación nunca compite con el contenido.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">09.A</span><span class="label">Navbar</span></div>
+          <h3 class="section__title">Estructura primaria</h3>
+          <div class="navbar">
+            <div class="navbar__logo">PAGURO<span class="sep">/</span>CORP</div>
+            <div class="navbar__items">
+              <a>Sobre Paguro</a>
+              <a class="is-current">Ecosistema <span class="chev">▾</span></a>
+              <a>Proyectos</a>
+              <a>Insights / Lab</a>
+              <a>Contacto</a>
+            </div>
+            <button class="btn btn--brand btn--sm">Conocer marcas <span class="arr">→</span></button>
+          </div>
+          <table class="tbl" style="margin-top:14px">
+            <tbody>
+              <tr><td>Altura</td><td class="val">64px desktop · 56px mobile</td><td class="role">Sticky · backdrop-blur 8px</td></tr>
+              <tr><td>Estado activo</td><td class="val">Underline 1px ink</td><td class="role">Sin fill, sin pill. Discreto.</td></tr>
+              <tr><td>Logo</td><td class="val">Mono 700 · 13px</td><td class="role">Slash naranja como articulación</td></tr>
+              <tr><td>CTA</td><td class="val">Solo "Conocer marcas"</td><td class="role">Acción ideal del visitante</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">09.B</span><span class="label">Dropdown Ecosistema</span></div>
+          <h3 class="section__title">Mega-menu con preview de unidades</h3>
+          <div class="dropdown">
+            <div class="dropdown__item">
+              <span class="tag tag--pagurai"><span class="dot"></span>Pagurai</span>
+              <div class="name">IA & automatización</div>
+              <div class="desc">Chatbots, agentes, integraciones y consultoría premium para empresas.</div>
+              <span class="mono">pagurai.com ↗</span>
+            </div>
+            <div class="dropdown__item">
+              <span class="tag tag--pagureo"><span class="dot"></span>Pagureo</span>
+              <div class="name">Commerce & lifestyle</div>
+              <div class="desc">Home office y desk setup. Smart minimalist para trabajadores remotos.</div>
+              <span class="mono">pagureo.com ↗</span>
+            </div>
+            <div class="dropdown__item">
+              <span class="tag tag--ermitano"><span class="dot"></span>Ermitaño Pep</span>
+              <div class="name">Media & IP</div>
+              <div class="desc">Universo narrativo. Awareness y branding del ecosistema.</div>
+              <span class="mono">canales ↗</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">09.C</span><span class="label">Jerarquía de navegación</span></div>
+          <h3 class="section__title">Cuatro niveles · uso por nivel</h3>
+          <table class="tbl">
+            <thead><tr><th>Nivel</th><th>Dónde aparece</th><th>Comportamiento</th></tr></thead>
+            <tbody>
+              <tr><td>L1 · Navbar</td><td class="role">Top · todas las páginas</td><td class="role">Sticky · 5 items · 1 dropdown · 1 CTA</td></tr>
+              <tr><td>L2 · Breadcrumbs</td><td class="role">Páginas internas (no Home, no Ecosistema raíz)</td><td class="role">Mono 11px · max 4 niveles</td></tr>
+              <tr><td>L3 · Page-nav</td><td class="role">Páginas largas (Sobre · Unidades)</td><td class="role">Sticky horizontal con anchors. Solo desktop.</td></tr>
+              <tr><td>L4 · TOC lateral</td><td class="role">Artículos del Lab</td><td class="role">Sticky a la izquierda · scroll-spy</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">09.D</span><span class="label">Reglas</span></div>
+          <h3 class="section__title">Disciplina de navegación</h3>
+          <div class="do-grid">
+            <div class="do do--use">
+              <span class="do__tag">Sí</span>
+              <div class="do__line">Mantener 5 items L1 fijos. Resaltar página activa con underline 1px. Mostrar dom externo siempre que se enlace a otra web (pagurai.com, pagureo.com).</div>
+            </div>
+            <div class="do do--avoid">
+              <span class="do__tag">No</span>
+              <div class="do__line">Añadir submenús anidados ≥ 3 niveles. Usar iconos decorativos en navbar. Cambiar el orden entre páginas. Hover effects con animación &gt; 220ms.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 10 · CMS ============= -->
+      <section id="cms" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 10 · Sistema</span>
+          <h2 class="chapter__title">CMS · slots híbridos modulares</h2>
+          <p class="chapter__lede">Sistema híbrido: cada componente tiene una estructura fija (no editable) y campos editables (slots). El editor del CMS arma páginas combinando slots, nunca diseña libre.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">10.A</span><span class="label">Modelo</span></div>
+          <h3 class="section__title">Tres entidades base</h3>
+          <p class="section__desc">Todo contenido editorial del ecosistema vive en una de estas tres colecciones. Cada una expone slots tipados al sistema.</p>
+          <table class="tbl">
+            <thead><tr><th>Colección</th><th>Campos</th><th>Páginas que consume</th></tr></thead>
+            <tbody>
+              <tr><td>Projects</td><td class="role">name · unidad · categoría · descripción · imagen · link · fecha · estado</td><td class="role">/proyectos · /proyectos/[slug] · home · unidades</td></tr>
+              <tr><td>Cases</td><td class="role">name · unidad · problema · solución · resultado · metodología · link · fecha</td><td class="role">/casos · /casos/[slug] · unidades</td></tr>
+              <tr><td>Insights</td><td class="role">título · categoría · autor · fecha · resumen · contenido · unidadRelacionada</td><td class="role">/insights · /insights/[slug] · home</td></tr>
+              <tr><td>Units (fijas)</td><td class="role">id · nombre · color · dominio · tagline · servicios · setupsExtras</td><td class="role">/ecosistema · /ecosistema/[unidad]</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">10.B</span><span class="label">Slot · anatomía</span></div>
+          <h3 class="section__title">Cómo se visualiza un slot</h3>
+          <p class="section__desc">Cada slot tiene un wrapper estable. El CMS llena <code>{{ contenido }}</code>; si está vacío, el slot se omite (no se muestra como "—" o "TBD").</p>
+          <div class="grid-2">
+            <div class="cms-slot">
+              <span class="cms-slot__label">SLOT · project.title</span>
+              <span class="cms-slot__path">/proyectos/[slug] · zona 03</span>
+              <div class="cms-slot__h">Sistema de agentes IA para operación financiera</div>
+              <span class="mono">required · max 80 chars</span>
+            </div>
+            <div class="cms-slot">
+              <span class="cms-slot__label">SLOT · insight.lede</span>
+              <span class="cms-slot__path">/insights/[slug] · zona 02</span>
+              <div class="cms-slot__h">Por qué la automatización no reemplaza al equipo — lo escala.</div>
+              <span class="mono">optional · max 200 chars</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">10.C</span><span class="label">Composición</span></div>
+          <h3 class="section__title">El editor compone, no diseña</h3>
+          <p class="section__desc">El admin del CMS arrastra bloques pre-tipados — hero, spotlight, grid, comparativa, quote, KPI, FAQ — y los rellena. Cada bloque define qué slots requiere y cómo se renderiza. Esto blinda la consistencia visual incluso con varios editores.</p>
+          <div class="callout">
+            <span class="callout__icon">VENTAJA</span>
+            <div class="callout__body">
+              <div class="callout__title">Imposible romper el sistema desde el CMS.</div>
+              <div class="callout__text">El editor no elige tipografía, color, padding ni jerarquía. Solo elige bloque + llena slot. El sistema garantiza que toda página resultante respeta los principios.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 11 · INTERACTION ============= -->
+      <section id="interaction" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 11 · Sistema</span>
+          <h2 class="chapter__title">Interacciones</h2>
+          <p class="chapter__lede">Movimiento con intención. Tres patrones cubren el 95% del sistema: hover sutil, focus visible, scroll-in escalonado. Nada decorativo, nada lento.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">11.A</span><span class="label">Hover</span></div>
+          <h3 class="section__title">Feedback inmediato · 120ms</h3>
+          <table class="tbl">
+            <thead><tr><th>Elemento</th><th>Cambio</th><th>Duración</th></tr></thead>
+            <tbody>
+              <tr><td>Card</td><td class="role">border-color: line → line-3 · translateY -1px · shadow-2</td><td class="val">220ms</td></tr>
+              <tr><td>Button (default)</td><td class="role">border-color: line-2 → ink-3 · bg: transparent → bg-3</td><td class="val">120ms</td></tr>
+              <tr><td>Button (brand)</td><td class="role">bg: orange → orange-light</td><td class="val">120ms</td></tr>
+              <tr><td>Nav item</td><td class="role">color: ink-2 → ink</td><td class="val">120ms</td></tr>
+              <tr><td>Unit card</td><td class="role">Aparece glow del color de unidad (--glow-*)</td><td class="val">220ms</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">11.B</span><span class="label">Scroll behavior</span></div>
+          <h3 class="section__title">Entrada de secciones</h3>
+          <p class="section__desc">Cuando una sección entra al viewport: opacity 0 → 1 + translateY 8px → 0, en 360ms con ease-out. Stagger de 60ms entre items de un grid. Nunca animar el contenido del hero (debe estar listo al cargar).</p>
+          <div class="callout">
+            <span class="callout__icon">ACCESIBILIDAD</span>
+            <div class="callout__body">
+              <div class="callout__title">Respetar prefers-reduced-motion.</div>
+              <div class="callout__text">Si el usuario tiene reducción de movimiento activada, todas las animaciones se desactivan: las entradas se vuelven instantáneas, los hovers conservan solo cambios de color (no transform, no glow).</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">11.C</span><span class="label">Patrones específicos</span></div>
+          <h3 class="section__title">Interacciones por sección</h3>
+          <div class="grid-2">
+            <div class="spec">
+              <div class="spec__head"><span class="l">Filter bar</span><span>chip toggle</span></div>
+              <div class="spec__body">
+                <div class="row">
+                  <span class="tag" style="background:var(--ink);color:var(--c-black);border-color:var(--ink)">Todos</span>
+                  <span class="tag">Pagurai</span>
+                  <span class="tag">Pagureo</span>
+                </div>
+                <p class="mono" style="margin-top:12px">→ Click sobre chip: invertir colores en 120ms · grid se reordena con fade 220ms.</p>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">FAQ</span><span>accordion</span></div>
+              <div class="spec__body">
+                <div style="border:1px solid var(--line);padding:14px;border-radius:var(--r-sm)">
+                  <div class="row row--between"><span style="color:var(--ink)">Pregunta seleccionada</span><span class="mono">−</span></div>
+                  <p class="mono" style="margin-top:8px;color:var(--ink-3)">Respuesta visible · transición 220ms ease-out · altura auto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">Dropdown</span><span>open / close</span></div>
+              <div class="spec__body">
+                <p class="mono">Abre con fade-in 120ms + slide-down 4px. Cierra al click fuera o Esc. Una sola dropdown abierta a la vez.</p>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__head"><span class="l">External link</span><span>tab nuevo</span></div>
+              <div class="spec__body">
+                <p class="mono">Todo link a dominio externo abre en nueva pestaña · ícono ↗ visible · rel="noopener".</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 12 · ECOSYSTEM ============= -->
+      <section id="ecosystem" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 12 · Ecosistema</span>
+          <h2 class="chapter__title">Relación visual entre unidades</h2>
+          <p class="chapter__lede">Las tres unidades comparten estructura y vocabulario, pero cada una tiene una personalidad visual propia activable. El sistema le da a cada marca un acento de color, un tono de glow y una palabra-personalidad.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">12.A</span><span class="label">Tres personalidades</span></div>
+          <h3 class="section__title">Cada unidad · un acento · una voz</h3>
+          <div class="eco">
+            <div class="eco-card eco-card--pagurai">
+              <div class="eco-card__accent"></div>
+              <span class="eco-card__role">Unidad · IA</span>
+              <h4 class="eco-card__title">Pagurai</h4>
+              <p class="eco-card__personality">Premium tecnológico. Frío, preciso, institucional.</p>
+              <p class="eco-card__attr">Acento azul · tipografía con más peso en mono · KPIs prominentes · vocabulario técnico controlado.</p>
+              <div class="eco-card__dom">pagurai.com ↗</div>
+            </div>
+            <div class="eco-card eco-card--pagureo">
+              <div class="eco-card__accent"></div>
+              <span class="eco-card__role">Unidad · Commerce</span>
+              <h4 class="eco-card__title">Pagureo</h4>
+              <p class="eco-card__personality">Smart minimalist. Cálido, funcional, accesible.</p>
+              <p class="eco-card__attr">Acento naranja (compartido con holding) · imagen de producto al frente · galería como protagonista · tono editorial-comercial.</p>
+              <div class="eco-card__dom">pagureo.com ↗</div>
+            </div>
+            <div class="eco-card eco-card--ermitano">
+              <div class="eco-card__accent"></div>
+              <span class="eco-card__role">Unidad · Media / IP</span>
+              <h4 class="eco-card__title">Ermitaño Pep</h4>
+              <p class="eco-card__personality">Narrativo, cultural, expresivo.</p>
+              <p class="eco-card__attr">Acento rosa · uso permitido de Kalam editorial · spotlights con producciones · más espacio para imágenes grandes.</p>
+              <div class="eco-card__dom">canales ↗</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">12.B</span><span class="label">Diferenciación sin ruptura</span></div>
+          <h3 class="section__title">Qué cambia · qué nunca cambia</h3>
+          <table class="tbl">
+            <thead><tr><th>Dimensión</th><th>Cambia por unidad</th><th>Es invariable</th></tr></thead>
+            <tbody>
+              <tr><td>Color acento</td><td class="val">Sí · azul / naranja / rosa</td><td class="role">—</td></tr>
+              <tr><td>Familias tipográficas</td><td class="role">—</td><td class="val">Inter + Mono · idéntico</td></tr>
+              <tr><td>Sistema de spacing</td><td class="role">—</td><td class="val">Idéntico</td></tr>
+              <tr><td>Grid 12</td><td class="role">—</td><td class="val">Idéntico</td></tr>
+              <tr><td>Sección extra (Stack / Setups / Universo)</td><td class="val">Sí · cada unidad expone una</td><td class="role">—</td></tr>
+              <tr><td>Énfasis de página</td><td class="val">KPIs / galería / spotlight</td><td class="role">—</td></tr>
+              <tr><td>Uso de Kalam</td><td class="val">Limitado · más en Ermitaño</td><td class="role">Nunca dominante</td></tr>
+              <tr><td>Patrón de cierre</td><td class="role">—</td><td class="val">close-cta unificado</td></tr>
+              <tr><td>Navbar + breadcrumbs + footer</td><td class="role">—</td><td class="val">Idéntico</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">12.C</span><span class="label">Identificación</span></div>
+          <h3 class="section__title">Marca visible en cada touchpoint</h3>
+          <p class="section__desc">En cualquier card, lista, breadcrumb o spotlight donde aparezca contenido de una unidad, debe mostrarse el tag de unidad con dot de color. El visitante debe poder reconocer la marca dueña de cualquier pieza en &lt; 1 segundo.</p>
+          <div class="row">
+            <span class="tag tag--pagurai"><span class="dot"></span>Pagurai</span>
+            <span class="tag tag--pagureo"><span class="dot"></span>Pagureo</span>
+            <span class="tag tag--ermitano"><span class="dot"></span>Ermitaño Pep</span>
+            <span class="hand muted" style="margin-left:auto">— "el dot es la firma del ecosistema."</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 13 · TEMPLATES ============= -->
+      <section id="templates" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 13 · Ecosistema</span>
+          <h2 class="chapter__title">Plantillas de página</h2>
+          <p class="chapter__lede">Catálogo de plantillas reutilizables. Cada plantilla define la secuencia rítmica y los bloques que la componen. Las 14 vistas del sitio se generan a partir de estas 6 plantillas.</p>
+        </div>
+
+        <div class="templates">
+          <div class="tmpl">
+            <div class="tmpl__head"><span class="tmpl__name">T01 · Home institucional</span><span class="tmpl__id">tmpl.home</span></div>
+            <div class="tmpl__map">
+              <div class="tmpl__row"><span class="ix">01</span><span class="h">Hero textual + diagrama</span><span class="v">HERO</span></div>
+              <div class="tmpl__row"><span class="ix">02</span><span class="h">Qué es Paguro</span><span class="v">STD · 6+6</span></div>
+              <div class="tmpl__row"><span class="ix">03</span><span class="h">Ecosistema (3 unit cards)</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">04</span><span class="h">Método (4 pasos)</span><span class="v">STD · 3+3+3+3</span></div>
+              <div class="tmpl__row"><span class="ix">05</span><span class="h">Proyectos destacados</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">06</span><span class="h">Insights recientes</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">07</span><span class="h">Close-CTA</span><span class="v">COMPACT</span></div>
+            </div>
+            <p class="mono">Aplica a: <span style="color:var(--ink-2)">/</span></p>
+          </div>
+
+          <div class="tmpl">
+            <div class="tmpl__head"><span class="tmpl__name">T02 · Editorial largo</span><span class="tmpl__id">tmpl.editorial</span></div>
+            <div class="tmpl__map">
+              <div class="tmpl__row"><span class="ix">01</span><span class="h">Page-nav sticky</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">02</span><span class="h">Hero institucional</span><span class="v">HERO</span></div>
+              <div class="tmpl__row"><span class="ix">03</span><span class="h">Manifesto</span><span class="v">HERO · alt</span></div>
+              <div class="tmpl__row"><span class="ix">04</span><span class="h">Bloque 6+6 contexto</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">05</span><span class="h">Método · 4 pasos</span><span class="v">STD · 3+3+3+3</span></div>
+              <div class="tmpl__row"><span class="ix">06</span><span class="h">Timeline · hitos</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">07</span><span class="h">Cross-link ecosistema</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">08</span><span class="h">Close-CTA</span><span class="v">COMPACT</span></div>
+            </div>
+            <p class="mono">Aplica a: <span style="color:var(--ink-2)">/sobre</span></p>
+          </div>
+
+          <div class="tmpl">
+            <div class="tmpl__head"><span class="tmpl__name">T03 · Hub de unidad</span><span class="tmpl__id">tmpl.unit</span></div>
+            <div class="tmpl__map">
+              <div class="tmpl__row"><span class="ix">01</span><span class="h">Breadcrumbs + page-nav</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">02</span><span class="h">Hero unidad (acento color)</span><span class="v">HERO</span></div>
+              <div class="tmpl__row"><span class="ix">03</span><span class="h">Qué es + rol</span><span class="v">STD · 6+6</span></div>
+              <div class="tmpl__row"><span class="ix">04</span><span class="h">Servicios / categorías</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">05</span><span class="h">Servicios secundarios (tags)</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">06</span><span class="h">KPIs · métricas</span><span class="v">STD · 3+3+3</span></div>
+              <div class="tmpl__row"><span class="ix">07</span><span class="h">Sección extra (Stack/Setup/Universo)</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">08</span><span class="h">Proyectos destacados</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">09</span><span class="h">Quote</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">10</span><span class="h">External CTA + close</span><span class="v">COMPACT</span></div>
+            </div>
+            <p class="mono">Aplica a: <span style="color:var(--ink-2)">/ecosistema/pagurai · /pagureo · /ermitano-pep</span></p>
+          </div>
+
+          <div class="tmpl">
+            <div class="tmpl__head"><span class="tmpl__name">T04 · Índice filtrable</span><span class="tmpl__id">tmpl.index</span></div>
+            <div class="tmpl__map">
+              <div class="tmpl__row"><span class="ix">01</span><span class="h">Hero + stat-row</span><span class="v">HERO</span></div>
+              <div class="tmpl__row"><span class="ix">02</span><span class="h">Spotlight destacado</span><span class="v">STD · 8+4</span></div>
+              <div class="tmpl__row"><span class="ix">03</span><span class="h">Filter bar (categoría + unidad)</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">04</span><span class="h">Grid 3 columnas</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">05</span><span class="h">Hub por unidad (opcional)</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">06</span><span class="h">Esquema CMS</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">07</span><span class="h">Close-CTA</span><span class="v">COMPACT</span></div>
+            </div>
+            <p class="mono">Aplica a: <span style="color:var(--ink-2)">/proyectos · /casos · /insights</span></p>
+          </div>
+
+          <div class="tmpl">
+            <div class="tmpl__head"><span class="tmpl__name">T05 · Detalle</span><span class="tmpl__id">tmpl.detail</span></div>
+            <div class="tmpl__map">
+              <div class="tmpl__row"><span class="ix">01</span><span class="h">Breadcrumbs</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">02</span><span class="h">Hero (tags + título + meta)</span><span class="v">HERO</span></div>
+              <div class="tmpl__row"><span class="ix">03</span><span class="h">Media destacada</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">04</span><span class="h">Descripción + meta lateral</span><span class="v">STD · 8+4</span></div>
+              <div class="tmpl__row"><span class="ix">05</span><span class="h">KPIs · resultado · 4 bloques narrativos</span><span class="v">STD · 3+3+3+3</span></div>
+              <div class="tmpl__row"><span class="ix">06</span><span class="h">Galería · stack · quote</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">07</span><span class="h">Marca relacionada · External CTA</span><span class="v">CMP</span></div>
+              <div class="tmpl__row"><span class="ix">08</span><span class="h">Relacionados</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">09</span><span class="h">Close-CTA</span><span class="v">COMPACT</span></div>
+            </div>
+            <p class="mono">Aplica a: <span style="color:var(--ink-2)">/proyectos/[slug] · /casos/[slug] · /insights/[slug]</span></p>
+          </div>
+
+          <div class="tmpl">
+            <div class="tmpl__head"><span class="tmpl__name">T06 · Conversión</span><span class="tmpl__id">tmpl.contact</span></div>
+            <div class="tmpl__map">
+              <div class="tmpl__row"><span class="ix">01</span><span class="h">Hero institucional</span><span class="v">HERO</span></div>
+              <div class="tmpl__row"><span class="ix">02</span><span class="h">Tipos de colaboración</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">03</span><span class="h">Formulario breve</span><span class="v">STD · 6+6</span></div>
+              <div class="tmpl__row"><span class="ix">04</span><span class="h">Links a marcas</span><span class="v">STD · 4+4+4</span></div>
+              <div class="tmpl__row"><span class="ix">05</span><span class="h">Email + canales</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">06</span><span class="h">FAQ</span><span class="v">STD</span></div>
+              <div class="tmpl__row"><span class="ix">07</span><span class="h">Localización + close</span><span class="v">COMPACT</span></div>
+            </div>
+            <p class="mono">Aplica a: <span style="color:var(--ink-2)">/contacto</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============= 14 · HANDOFF ============= -->
+      <section id="handoff" class="chapter">
+        <div class="chapter__head">
+          <span class="chapter__num">Capítulo 14 · Cierre</span>
+          <h2 class="chapter__title">Handoff a Fase 03 · Medium fidelity</h2>
+          <p class="chapter__lede">Qué queda listo · qué entra en la próxima fase · cómo se preserva la disciplina del sistema en el salto a copy real, imagen real y branding final.</p>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">14.A</span><span class="label">Listo · entregable Fase 02</span></div>
+          <h3 class="section__title">El sistema operativo, definido</h3>
+          <div class="grid-2">
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">8 principios UX</h4><p class="principle__desc">Filtro de cada decisión futura.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">Tokens completos</h4><p class="principle__desc">Color · tinta · spacing · radii · sombras · motion.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">Escala tipográfica</h4><p class="principle__desc">Display → Label · 9 niveles · 3 familias con rol claro.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">Grid + containers + ritmo</h4><p class="principle__desc">12 cols · 4 composiciones · 3 alturas de sección · 4 breakpoints.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">5 familias de componentes</h4><p class="principle__desc">Structure · Surface · Editorial · Data · Action + estados.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">Navegación + CMS + interacción</h4><p class="principle__desc">4 niveles de nav · slots híbridos · 3 patrones de motion.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">Relación visual del ecosistema</h4><p class="principle__desc">Disciplina compartida + acento por unidad.</p></div>
+            <div class="principle"><span class="principle__ix">✓</span><h4 class="principle__title">6 plantillas de página</h4><p class="principle__desc">Cubren las 14 vistas del sitio.</p></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">14.B</span><span class="label">Próxima fase</span></div>
+          <h3 class="section__title">Lo que entra en Fase 03 · Medium fidelity</h3>
+          <table class="tbl">
+            <thead><tr><th>Bloque</th><th>Entregable</th><th>Decisiones por tomar</th></tr></thead>
+            <tbody>
+              <tr><td>Copywriting</td><td class="val">Copy real para todas las páginas</td><td class="role">Tono institucional · headlines de hero · descripciones de unidad · CTAs</td></tr>
+              <tr><td>Sistema de imagen</td><td class="val">Direction de fotografía · 3D · diagramas</td><td class="role">Estilo de hero · galería de Pagureo · universo de Ermitaño Pep</td></tr>
+              <tr><td>Branding final</td><td class="val">Logo + uso institucional</td><td class="role">Marca paguro · marcas-caparazón · cómo conviven en pagurocorp.com</td></tr>
+              <tr><td>Iconografía</td><td class="val">Set de íconos coherente</td><td class="role">Solo si el sistema lo justifica · línea o solid · max 24 íconos</td></tr>
+              <tr><td>Motion design</td><td class="val">Microanimaciones detalladas</td><td class="role">Loops del hero · transiciones entre páginas · scroll-in stagger</td></tr>
+              <tr><td>Frontend stack</td><td class="val">Decisión técnica</td><td class="role">Next/Astro · CMS (Sanity/Payload) · hosting</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section">
+          <div class="section__kicker"><span class="id">14.C</span><span class="label">Compromisos</span></div>
+          <h3 class="section__title">Reglas que NO se renegocian al avanzar</h3>
+          <div class="do-grid">
+            <div class="do do--use">
+              <span class="do__tag">Compromiso</span>
+              <div class="do__line">El sistema de tokens permanece. Cualquier cambio se hace al token, nunca como override puntual.</div>
+            </div>
+            <div class="do do--use">
+              <span class="do__tag">Compromiso</span>
+              <div class="do__line">Pagurocorp.com no incorpora servicios que pertenezcan a una unidad. Si se intenta — se enruta.</div>
+            </div>
+            <div class="do do--use">
+              <span class="do__tag">Compromiso</span>
+              <div class="do__line">El close-CTA cierra todas las páginas. Sin excepciones.</div>
+            </div>
+            <div class="do do--use">
+              <span class="do__tag">Compromiso</span>
+              <div class="do__line">Cada bloque editorial pasa por el CMS. Nada se hardcodea por urgencia.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section" style="margin-top:48px">
+          <div class="callout" style="border-left-width:3px">
+            <span class="callout__icon">→ FASE 03</span>
+            <div class="callout__body">
+              <div class="callout__title">El sistema está listo para vestirse.</div>
+              <div class="callout__text">A partir de aquí, todas las decisiones visuales son aplicación — no estructura. La estructura ya está resuelta.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+</div>
+
+<script src="ux-system.js"></script>
+</body>
+</html>
