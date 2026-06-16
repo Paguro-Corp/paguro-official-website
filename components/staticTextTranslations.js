@@ -1,0 +1,310 @@
+const STATIC_TEXT_EN = {
+  'HOLDING · BOGOTÁ · ARQUITECTURA EMPRESARIAL ADAPTATIVA': 'HOLDING · BOGOTA · ADAPTIVE BUSINESS ARCHITECTURE',
+  'No improvisamos.': "We don't improvise.",
+  Arquitectamos: 'We architect',
+  'Arquitectamos.': 'We architect.',
+  'Diseñamos estructuras inteligentes que generan valor de forma eficiente, adaptable y difícil de copiar. Como el cangrejo paguro: la arquitectura permanece, el caparazón cambia.':
+    'We design intelligent structures that generate value efficiently, adaptively, and in ways that are hard to copy. Like the hermit crab: the architecture stays, the shell changes.',
+  'Diseñamos estructuras inteligentes que generan valor de forma eficiente, adaptable y difícil de copiar.':
+    'We design intelligent structures that generate value efficiently, adaptively, and in ways that are hard to copy.',
+  'Explorar el ecosistema': 'Explore the ecosystem',
+  'Conocer la filosofía': 'Read the philosophy',
+  'Unidades activas': 'Active units',
+  'En desarrollo': 'In development',
+  'Modelo dual': 'Dual model',
+  'Sede · Bogotá': 'HQ · Bogota',
+  '[ NÚCLEO ]': '[ CORE ]',
+  'FIG·01 · arquitectura del ecosistema': 'FIG·01 · ecosystem architecture',
+  'FIG·02 · caparazón institucional': 'FIG·02 · institutional shell',
+  'FIG·04 · arquitectura de marca': 'FIG·04 · brand architecture',
+  'ESENCIA DE MARCA': 'BRAND ESSENCE',
+  'La arquitectura permanece.': 'The architecture remains.',
+  'El caparazón cambia.': 'The shell changes.',
+  'No construimos empresas tradicionales. Construimos sistemas adaptativos diseñados para evolucionar — marcas que se transforman cuando el entorno lo exige, sin perder el núcleo.':
+    'We do not build traditional companies. We build adaptive systems designed to evolve, brands that transform when the environment demands it without losing their core.',
+  PROPÓSITO: 'PURPOSE',
+  Construimos: 'We build',
+  'ecosistemas empresariales modernos,': 'modern business ecosystems,',
+  'automatizados y adaptativos que': 'automated and adaptive, that',
+  'redefinen categorías': 'redefine categories',
+  'y multiplican valor con': 'and multiply value with',
+  'precisión estructural.': 'structural precision.',
+  Tipo: 'Type',
+  'Holding estratégico': 'Strategic holding',
+  Sede: 'HQ',
+  'Bogotá · Colombia': 'Bogota · Colombia',
+  Modelo: 'Model',
+  'Doctrina': 'Doctrine',
+  'Sistemas antes que personas': 'Systems before headcount',
+  Estilo: 'Style',
+  'Tech sofisticado · futurista': 'Sophisticated · futuristic tech',
+  'VALORES INSTITUCIONALES': 'INSTITUTIONAL VALUES',
+  'Cinco principios. Una arquitectura.': 'Five principles. One architecture.',
+  'Cada decisión del holding y de sus marcas pasa por este filtro. No son palabras de cultura — son criterios operativos.':
+    'Every decision by the holding and its brands passes through this filter. These are not culture words, they are operating criteria.',
+  Adaptabilidad: 'Adaptability',
+  'Mutamos estructuras, no perdemos el núcleo. Cada caparazón se rediseña cuando el mercado lo exige.':
+    'We mutate structures without losing the core. Each shell is redesigned when the market demands it.',
+  Automatización: 'Automation',
+  'Sistemas antes que personas. Donde un proceso se repite, vive un agente. Donde un agente vive, libera capacidad humana.':
+    'Systems before headcount. Wherever a process repeats, an agent can live. Wherever an agent lives, human capacity is freed.',
+  'Sistemas antes que personas. Donde un proceso se repite, vive un agente. Donde un agente vive, libera capacidad.':
+    'Systems before headcount. Wherever a process repeats, an agent can live. Wherever an agent lives, capacity is freed.',
+  'Diseño funcional': 'Functional design',
+  'El diseño es claridad, percepción y ventaja. No es estética — es decisión estructural.':
+    'Design is clarity, perception and advantage. It is not aesthetics, it is structural decision-making.',
+  'Inteligencia sistémica': 'Systemic intelligence',
+  'Pensamos en flujos, eficiencia y escalabilidad. Optimizamos el sistema, no la tarea.':
+    'We think in flows, efficiency and scalability. We optimize the system, not the task.',
+  'Evolución permanente': 'Permanent evolution',
+  'Nada es definitivo. Todo puede optimizarse. La permanencia está en la arquitectura, no en el output.':
+    'Nothing is final. Everything can be optimized. Permanence lives in the architecture, not the output.',
+  'ECOSISTEMA · MARCAS-CAPARAZÓN': 'ECOSYSTEM · SHELL BRANDS',
+  'Dos unidades activas. Una en desarrollo. Un mismo sistema.': 'Two active units. One in development. One system.',
+  'Dos marcas activas.': 'Two active brands.',
+  'Una en desarrollo.': 'One in development.',
+  'Un mismo sistema.': 'One system.',
+  'Cada unidad opera con autonomía completa, sitio web independiente y modelo de negocio propio. El holding define la doctrina; cada marca la materializa para su mercado.':
+    'Each unit operates with full autonomy, an independent website and its own business model. The holding defines the doctrine; each brand materializes it for its market.',
+  'Pagurai opera servicios B2B de IA y automatización. Pagureo opera ecommerce B2C de home office. Ermitaño Pep construye awareness narrativa. Cada caparazón es independiente — la arquitectura los une.':
+    'Pagurai operates B2B AI and automation services. Pagureo operates B2C home-office ecommerce. Ermitano Pep builds narrative awareness. Each shell is independent, the architecture connects them.',
+  'Contacto estratégico': 'Strategic contact',
+  'Explorar marcas': 'Explore brands',
+  'Matriz comparativa': 'Comparison matrix',
+  'AGENCIA · IA · B2B': 'AGENCY · AI · B2B',
+  'Automatización e inteligencia artificial para operaciones críticas. Premium, técnico, integrado.':
+    'Automation and artificial intelligence for critical operations. Premium, technical, integrated.',
+  'Automatización e inteligencia artificial para operaciones críticas.':
+    'Automation and artificial intelligence for critical operations.',
+  'Chatbots IA, agentes, integraciones, consultoría, marketing IA, contenido IA y estrategia digital para organizaciones que necesitan escalar sin contratar más.':
+    'AI chatbots, agents, integrations, consulting, AI marketing, AI content and digital strategy for organizations that need to scale without hiring more.',
+  'ECOMMERCE · B2C': 'ECOMMERCE · B2C',
+  'Home office, muebles, accesorios y gaming. Smart minimalist para clase media en Bogotá.':
+    'Home office, furniture, accessories and gaming. Smart minimalist for the middle class in Bogota.',
+  'Home office, muebles, accesorios y gaming. Smart minimalist.':
+    'Home office, furniture, accessories and gaming. Smart minimalist.',
+  'Curaduría editorial sobre catálogo. Desk setups completos para trabajadores remotos. Calidad sobre rotación, función sobre tendencia.':
+    'Editorial curation over catalog. Complete desk setups for remote workers. Quality over rotation, function over trend.',
+  'Activo · Bogotá': 'Active · Bogota',
+  Activo: 'Active',
+  'MEDIA · IP · AWARENESS': 'MEDIA · IP · AWARENESS',
+  'El motor narrativo del ecosistema. Personaje, universo y producciones de awareness.':
+    'The ecosystem narrative engine. Character, universe and awareness productions.',
+  'El motor narrativo del ecosistema. Personaje, universo, awareness.':
+    'The ecosystem narrative engine. Character, universe, awareness.',
+  'Branding, storytelling y producciones que construyen reconocimiento para todo el holding. La marca que no vende — significa.':
+    'Branding, storytelling and productions that build recognition for the whole holding. The brand that does not sell, means.',
+  'canales ↗': 'channels ↗',
+  '¿Querés ver cómo se relacionan las tres unidades?': 'Want to see how the three units relate?',
+  'Ver ecosistema completo': 'View full ecosystem',
+  'MANTRA · DOCTRINA OPERATIVA': 'MANTRA · OPERATING DOCTRINE',
+  Diseñar: 'Design',
+  'antes de ejecutar.': 'before executing.',
+  'antes de ejecutar': 'before executing',
+  Automatizar: 'Automate',
+  'antes de contratar.': 'before hiring.',
+  'antes de contratar': 'before hiring',
+  Optimizar: 'Optimize',
+  'siempre.': 'always.',
+  siempre: 'always',
+  Evolucionar: 'Evolve',
+  'constantemente.': 'constantly.',
+  constantemente: 'constantly',
+  '— Corporación Paguro SAS · Bogotá': '— Corporacion Paguro SAS · Bogota',
+  'MÉTODO PAGURO': 'PAGURO METHOD',
+  'Cuatro decisiones antes de cualquier acción.': 'Four decisions before any action.',
+  'El método se aplica idéntico a cada proyecto del holding — sea un agente IA, un setup de escritorio o una pieza narrativa. Sin método hay actividad. Con método hay sistema.':
+    'The method applies identically to every holding project, whether an AI agent, a desk setup or a narrative piece. Without method there is activity. With method there is system.',
+  'El método se aplica idéntico a cada proyecto del holding. Sin método hay actividad. Con método hay sistema.':
+    'The method applies identically to every holding project. Without method there is activity. With method there is system.',
+  'Primero el sistema. Después el output. La arquitectura siempre antecede al objeto.':
+    'First the system. Then the output. Architecture always precedes the object.',
+  'Primero el sistema. Después el output. La arquitectura siempre antecede al objeto. No hay atajo aceptable.':
+    'First the system. Then the output. Architecture always precedes the object. There is no acceptable shortcut.',
+  'Donde un proceso se repite, vive un agente. Donde un agente vive, libera capacidad humana.':
+    'Wherever a process repeats, an agent can live. Wherever an agent lives, human capacity is freed.',
+  'Donde un proceso se repite, vive un agente. Donde un agente vive, libera capacidad humana para problemas que no se automatizan.':
+    'Wherever a process repeats, an agent can live. Wherever an agent lives, human capacity is freed for problems that cannot be automated.',
+  'No crecemos en lo que no entendemos. Medir, ajustar, medir — antes de duplicar.':
+    'We do not grow what we do not understand. Measure, adjust, measure, before duplicating.',
+  'No crecemos en lo que no entendemos. Medir, ajustar, medir — antes de duplicar. La optimización no es fase, es estado.':
+    'We do not grow what we do not understand. Measure, adjust, measure, before duplicating. Optimization is not a phase, it is a state.',
+  'El paguro cambia de caparazón cuando crece. Las marcas también. La permanencia está en la arquitectura.':
+    'The hermit crab changes shells as it grows. Brands do too. Permanence lives in the architecture.',
+  'El paguro cambia de caparazón cuando crece. Las marcas también. La permanencia está en la arquitectura, no en la forma.':
+    'The hermit crab changes shells as it grows. Brands do too. Permanence lives in the architecture, not the form.',
+  'Pensamiento estratégico, publicado mensualmente.': 'Strategic thinking, published monthly.',
+  'El Lab es donde el método se vuelve público. Si construimos sistemas para otros, también escribimos sobre cómo se construyen.':
+    'The Lab is where the method becomes public. If we build systems for others, we also write about how they are built.',
+  'IA · Método Paguro': 'AI · Paguro Method',
+  'Automatización radical: por qué la IA no reemplaza al equipo — lo escala.':
+    'Radical automation: why AI does not replace the team, it scales it.',
+  'El argumento detrás de la paradoja: contamos a más personas justo después de sustituir tareas por agentes. Sistemas antes que personas, en serio.':
+    'The argument behind the paradox: we count more people right after replacing tasks with agents. Systems before headcount, seriously.',
+  'Arquitectura empresarial adaptativa: cómo articular marcas sin diluirlas.':
+    'Adaptive business architecture: how to articulate brands without diluting them.',
+  'La diferencia entre un holding y una sumatoria de empresas. Reglas que no negociamos cuando una unidad crece más rápido que las otras.':
+    'The difference between a holding company and a sum of companies. Rules we do not negotiate when one unit grows faster than the others.',
+  'eCommerce · Operaciones': 'eCommerce · Operations',
+  'El setup como producto editorial: vender curaduría, no catálogo.':
+    'The setup as an editorial product: selling curation, not catalog.',
+  'Cómo Pagureo evita competir por precio. La galería como interfaz comercial. Lecciones del modelo smart minimalist aplicado a B2C.':
+    'How Pagureo avoids competing on price. The gallery as a commercial interface. Lessons from the smart minimalist model applied to B2C.',
+  'Leer todo el Lab': 'Read the full Lab',
+  'CIERRE · PRÓXIMO PASO': 'CLOSE · NEXT STEP',
+  'Si te interesa cómo opera un holding moderno,': 'If you are interested in how a modern holding works,',
+  'empezá por las marcas-caparazón.': 'start with the shell brands.',
+  'Leer filosofía completa': 'Read the full philosophy',
+  'SOBRE PAGURO · FILOSOFÍA · MÉTODO': 'ABOUT PAGURO · PHILOSOPHY · METHOD',
+  'Como el paguro,': 'Like the hermit crab,',
+  'evolucionamos cuando': 'we evolve when',
+  'el entorno cambia.': 'the environment changes.',
+  'Creamos estructuras que se adaptan, marcas que se transforman y sistemas que trabajan solos. Automatizamos. Optimizamos. Evolucionamos. Siempre.':
+    'We create structures that adapt, brands that transform and systems that work on their own. We automate. We optimize. We evolve. Always.',
+  'ORIGEN CONCEPTUAL': 'CONCEPTUAL ORIGIN',
+  'El cangrejo paguro · una metáfora operativa.': 'The hermit crab · an operating metaphor.',
+  NÚCLEO: 'CORE',
+  ARQUITECTURA: 'ARCHITECTURE',
+  permanece: 'remains',
+  'CAPARAZÓN 01': 'SHELL 01',
+  'CAPARAZÓN 02': 'SHELL 02',
+  'CAPARAZÓN 03': 'SHELL 03',
+  'núcleo + caparazones': 'core + shells',
+  'El paguro no fabrica su caparazón — lo encuentra, lo adopta, lo abandona cuando crece. Lo que permanece es el animal, no la concha.':
+    'The hermit crab does not manufacture its shell. It finds it, adopts it, abandons it when it grows. What remains is the animal, not the shell.',
+  'Aplicamos la misma lógica al holding. Cada marca del ecosistema es un caparazón funcional para una necesidad específica del mercado. Cuando la necesidad cambia, el caparazón se rediseña o se reemplaza.':
+    'We apply the same logic to the holding. Each ecosystem brand is a functional shell for a specific market need. When the need changes, the shell is redesigned or replaced.',
+  'La arquitectura — el método, los valores, la disciplina operativa — permanece. Eso es lo que llamamos':
+    'The architecture, the method, the values and the operating discipline remain. That is what we call',
+  'arquitectura empresarial adaptativa.': 'adaptive business architecture.',
+  'ARQUETIPOS DE MARCA': 'BRAND ARCHETYPES',
+  'Creador y Sabio · la doble inteligencia.': 'Creator and Sage · double intelligence.',
+  'Paguro opera bajo dos arquetipos psicológicos complementarios: el Creador construye, el Sabio entiende. Una marca sin construcción es teoría. Una marca sin sabiduría es improvisación.':
+    'Paguro operates under two complementary psychological archetypes: the Creator builds, the Sage understands. A brand without construction is theory. A brand without wisdom is improvisation.',
+  'ARQUETIPO · 01': 'ARCHETYPE · 01',
+  Creador: 'Creator',
+  Innovación: 'Innovation',
+  Diseño: 'Design',
+  Arquitectura: 'Architecture',
+  Construcción: 'Construction',
+  'Construye sistemas. Diseña estructuras. Da forma a lo que no existe. Es la fuerza que materializa la doctrina en producto operable.':
+    'It builds systems. Designs structures. Gives shape to what does not exist. It is the force that turns doctrine into operable product.',
+  'ARQUETIPO · 02': 'ARCHETYPE · 02',
+  Sabio: 'Sage',
+  Visión: 'Vision',
+  Estrategia: 'Strategy',
+  Claridad: 'Clarity',
+  'Pensamiento profundo': 'Deep thinking',
+  'Observa. Anticipa. Comprende patrones antes de actuar. Es la fuerza que decide qué construir, cuándo y por qué. Inteligencia antes que ejecución.':
+    'It observes. Anticipates. Understands patterns before acting. It is the force that decides what to build, when and why. Intelligence before execution.',
+  MANIFIESTO: 'MANIFESTO',
+  evolucionamos: 'we evolve',
+  cuando: 'when',
+  'Creamos estructuras que se adaptan, marcas que se transforman y sistemas que trabajan solos.':
+    'We create structures that adapt, brands that transform and systems that work on their own.',
+  'Automatizamos. Optimizamos. Evolucionamos. Siempre.': 'We automate. We optimize. We evolve. Always.',
+  'TONO DE VOZ': 'TONE OF VOICE',
+  'Claro. Preciso. Estratégico. Confiable. Sobrio.': 'Clear. Precise. Strategic. Reliable. Restrained.',
+  'Hablamos con claridad y autoridad. No exageramos. No prometemos de más. Comunicamos lo que somos: arquitectura, sistemas y resultados.':
+    'We speak with clarity and authority. We do not exaggerate. We do not overpromise. We communicate what we are: architecture, systems and results.',
+  Claro: 'Clear',
+  'Sin ambigüedad. Cada frase comunica una decisión.': 'No ambiguity. Every sentence communicates a decision.',
+  Preciso: 'Precise',
+  'Palabras exactas. Números cuando aplican.': 'Exact words. Numbers when they apply.',
+  Estratégico: 'Strategic',
+  'Hablamos del sistema. No del rasgo aislado.': 'We speak about the system. Not the isolated trait.',
+  Confiable: 'Reliable',
+  'No prometemos lo que no operamos. Coherencia interna.': 'We do not promise what we do not operate. Internal coherence.',
+  Sobrio: 'Restrained',
+  'Sin slogans, sin entusiasmo gratuito. Densidad por encima de volumen.': 'No slogans, no empty enthusiasm. Density over volume.',
+  'UNIDADES DEL ECOSISTEMA': 'ECOSYSTEM UNITS',
+  'Tres caparazones. Tres mercados. Una misma doctrina.': 'Three shells. Three markets. One doctrine.',
+  'SERVICIOS PRINCIPALES': 'MAIN SERVICES',
+  'Agentes IA': 'AI agents',
+  Automatizaciones: 'Automations',
+  Integraciones: 'Integrations',
+  Consultoría: 'Consulting',
+  'SERVICIOS SECUNDARIOS': 'SECONDARY SERVICES',
+  'Contenido IA': 'AI content',
+  'Estrategia digital': 'Digital strategy',
+  CATEGORÍAS: 'CATEGORIES',
+  Muebles: 'Furniture',
+  Accesorios: 'Accessories',
+  MERCADO: 'MARKET',
+  Bogotá: 'Bogota',
+  'Trabajadores remotos': 'Remote workers',
+  'Clase media': 'Middle class',
+  CONTENIDO: 'CONTENT',
+  'Universo narrativo': 'Narrative universe',
+  Personaje: 'Character',
+  Producciones: 'Productions',
+  'OBJETIVO ESTRATÉGICO': 'STRATEGIC OBJECTIVE',
+  'Cultura visual': 'Visual culture',
+  Comunidad: 'Community',
+  'MATRIZ COMPARATIVA': 'COMPARISON MATRIX',
+  'Cómo se diferencian las marcas-caparazón.': 'How the shell brands differ.',
+  'Misma arquitectura, foco distinto. Esta matriz ayuda a partners e inversionistas a comparar el ecosistema en un vistazo.':
+    'Same architecture, different focus. This matrix helps partners and investors compare the ecosystem at a glance.',
+  Dimensión: 'Dimension',
+  Categoría: 'Category',
+  'Agencia IA': 'AI agency',
+  'Media / IP': 'Media / IP',
+  'B2B · servicios': 'B2B · services',
+  'B2C · productos': 'B2C · products',
+  'Contenido · awareness': 'Content · awareness',
+  Audiencia: 'Audience',
+  'Empresas medianas': 'Mid-sized companies',
+  'Trabajadores remotos · BOG': 'Remote workers · BOG',
+  'Comunidad amplia': 'Broad community',
+  Percepción: 'Perception',
+  'Premium tecnológica': 'Premium technology',
+  'Cultural · narrativa': 'Cultural · narrative',
+  'Rol estratégico': 'Strategic role',
+  'Motor operativo': 'Operating engine',
+  'Validación de mercado': 'Market validation',
+  'Awareness del holding': 'Holding awareness',
+  Estado: 'Status',
+  Dominio: 'Domain',
+  'canales sociales ↗': 'social channels ↗',
+  'RELACIÓN ENTRE UNIDADES': 'RELATIONSHIP BETWEEN UNITS',
+  'Tres marcas que se retroalimentan.': 'Three brands that feed each other.',
+  'Cada unidad valida hipótesis para las demás. No son silos: son módulos del mismo sistema operativo.':
+    'Each unit validates hypotheses for the others. They are not silos: they are modules of the same operating system.',
+  'Pagurai opera': 'Pagurai operates',
+  'La automatización que Pagurai diseña para clientes externos opera también Pagureo internamente. El producto del holding usa el producto del holding.':
+    'The automation Pagurai designs for external clients also operates Pagureo internally. The holding product uses the holding product.',
+  'Pagureo valida': 'Pagureo validates',
+  'Pagureo es el laboratorio de mercado del holding. Cada decisión comercial que prueba puede aplicarse a clientes B2B después.':
+    'Pagureo is the holding market laboratory. Every commercial decision it tests can later be applied to B2B clients.',
+  'Ermitaño amplifica': 'Ermitano amplifies',
+  'El awareness narrativo de Ermitaño Pep posiciona al holding completo. Las dos marcas comerciales heredan reconocimiento sin gastar en performance.':
+    'Ermitano Pep narrative awareness positions the whole holding. The two commercial brands inherit recognition without spending on performance.',
+  'VISITAR LAS MARCAS': 'VISIT THE BRANDS',
+  'Cada caparazón tiene su propia web.': 'Each shell has its own website.',
+  'Esta página no reemplaza ninguna. Es el mapa estratégico — el holding como vista. Para profundizar en cada unidad, visitá su sitio independiente.':
+    'This page does not replace any of them. It is the strategic map, the holding as a view. To go deeper into each unit, visit its independent site.',
+  'visitar marca': 'visit brand',
+  'MEDIA · IP · AWARENESS (próximamente)': 'MEDIA · IP · AWARENESS (coming soon)',
+  'canales sociales': 'social channels',
+  'muy pronto': 'very soon',
+  'Holding institucional moderno. Arquitectura empresarial adaptativa, automatización e inteligencia sistémica.':
+    'Modern institutional holding. Adaptive business architecture, automation and systemic intelligence.',
+  'Holding institucional moderno. Arquitectura empresarial adaptativa.':
+    'Modern institutional holding. Adaptive business architecture.',
+  'Holding institucional moderno. Arquitectura empresarial adaptativa, automatización e inteligencia sistémica. Bogotá · Colombia.':
+    'Modern institutional holding. Adaptive business architecture, automation and systemic intelligence. Bogota · Colombia.',
+  Filosofía: 'Philosophy',
+  Método: 'Method',
+  Valores: 'Values',
+  Marcas: 'Brands',
+  Contenido: 'Content',
+  Casos: 'Cases',
+  Legal: 'Legal',
+  Privacidad: 'Privacy',
+  Terminos: 'Terms',
+  '© 2026 Corporación Paguro SAS': '© 2026 Corporacion Paguro SAS',
+  'Paguro es una arquitectura diseñada para producir excelencia repetible.':
+    'Paguro is an architecture designed to produce repeatable excellence.',
+};
+
+export default STATIC_TEXT_EN;
