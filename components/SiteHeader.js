@@ -1,42 +1,44 @@
+import { sitePath } from './sitePath';
+
 export default function SiteHeader({ current }) {
   const linkClass = (key) => (current === key ? 'is-current' : undefined);
 
   return (
     <>
       <nav className="page-switch">
-        <a href="/" className={linkClass('home')} data-i18n="page-home">
+        <a href={sitePath('/')} className={linkClass('home')} data-i18n="page-home">
           Home
         </a>
-        <a href="/sobre" className={linkClass('sobre')} data-i18n="page-sobre">
+        <a href={sitePath('/sobre')} className={linkClass('sobre')} data-i18n="page-sobre">
           Sobre
         </a>
-        <a href="/ecosistema" className={linkClass('ecosistema')} data-i18n="page-ecosistema">
+        <a href={sitePath('/ecosistema')} className={linkClass('ecosistema')} data-i18n="page-ecosistema">
           Ecosistema
         </a>
       </nav>
 
       <header className="nav" id="nav">
         <div className="nav__inner">
-          <a className="logo" href="/">
-            <img className="logo__mark" src="/assets/paguro-isotipo.png" alt="Paguro" width="22" height="22" />
+          <a className="logo" href={sitePath('/')}>
+            <img className="logo__mark" src={sitePath('/assets/paguro-isotipo.png')} alt="Paguro" width="22" height="22" />
             <span className="logo__text">
               PAGURO<small>CORPORACION PAGURO SAS</small>
             </span>
           </a>
           <nav className="nav__items">
-            <a href="/sobre" className={linkClass('sobre')} data-i18n="nav-sobre">
+            <a href={sitePath('/sobre')} className={linkClass('sobre')} data-i18n="nav-sobre">
               Sobre Paguro
             </a>
-            <a href="/ecosistema" className={linkClass('ecosistema')}>
+            <a href={sitePath('/ecosistema')} className={linkClass('ecosistema')}>
               <span data-i18n="nav-ecosistema">Ecosistema</span> <span className="chev">v</span>
             </a>
-            <a href="/proyectos" className={linkClass('proyectos')} data-i18n="nav-proyectos">
+            <a href={sitePath('/proyectos')} className={linkClass('proyectos')} data-i18n="nav-proyectos">
               Proyectos
             </a>
-            <a href="/insights" className={linkClass('insights')} data-i18n="nav-insights">
+            <a href={sitePath('/insights')} className={linkClass('insights')} data-i18n="nav-insights">
               Insights / Lab
             </a>
-            <a href="/contacto" className={linkClass('contacto')} data-i18n="nav-contacto">
+            <a href={sitePath('/contacto')} className={linkClass('contacto')} data-i18n="nav-contacto">
               Contacto
             </a>
           </nav>
@@ -51,7 +53,7 @@ export default function SiteHeader({ current }) {
               </svg>
             </button>
           </div>
-          <a className="btn btn--accent btn--sm" href="/contacto">
+          <a className="btn btn--accent btn--sm" href={sitePath('/contacto')}>
             <span data-i18n="nav-cta">Contacto</span> <span className="arr">→</span>
           </a>
         </div>

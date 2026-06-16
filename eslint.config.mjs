@@ -6,6 +6,7 @@ const eslintConfig = [
     ignores: [
       '.next/**',
       'node_modules/**',
+      'out/**',
       'public/**',
       'home-tweaks.jsx',
       'pages.js',
@@ -31,6 +32,7 @@ const eslintConfig = [
         console: 'readonly',
         document: 'readonly',
         localStorage: 'readonly',
+        process: 'readonly',
         window: 'readonly',
       },
     },

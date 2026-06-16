@@ -1,6 +1,7 @@
 import PageBehavior from '@/components/PageBehavior';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
+import { sitePath } from '@/components/sitePath';
 
 export const metadata = {
   title: 'Insights / Lab',
@@ -71,7 +72,7 @@ export default function InsightsPage() {
                     <span data-copy-es="Leer articulos" data-copy-en="Read articles">Leer articulos</span>{' '}
                     <span className="arr">→</span>
                   </a>
-                  <a className="btn btn--ghost" href="/contacto">
+                  <a className="btn btn--ghost" href={sitePath('/contacto')}>
                     Contacto
                   </a>
                 </div>
@@ -149,7 +150,7 @@ export default function InsightsPage() {
               </div>
               <div className="newsletter__row">
                 <div className="newsletter__input"></div>
-                <a className="btn btn--accent" href="/contacto">
+                <a className="btn btn--accent" href={sitePath('/contacto')}>
                   Contacto
                 </a>
               </div>

@@ -1,6 +1,7 @@
 import PageBehavior from '@/components/PageBehavior';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
+import { sitePath } from '@/components/sitePath';
 
 export const metadata = {
   title: 'Proyectos',
@@ -77,13 +78,13 @@ export default function ProyectosPage() {
                   digitales aplicados a unidades reales.
                 </p>
                 <div className="hero__ctas">
-                  <a className="btn btn--accent" href="/contacto">
+                  <a className="btn btn--accent" href={sitePath('/contacto')}>
                     <span data-copy-es="Contacto estrategico" data-copy-en="Strategic contact">
                       Contacto estrategico
                     </span>{' '}
                     <span className="arr">→</span>
                   </a>
-                  <a className="btn btn--ghost" href="/insights">
+                  <a className="btn btn--ghost" href={sitePath('/insights')}>
                     Insights / Lab
                   </a>
                 </div>
@@ -149,7 +150,7 @@ export default function ProyectosPage() {
                     {project.bodyEs}
                   </div>
                   <div className="eco-card__foot">
-                  <a className="eco-card__dom" href="/contacto">
+                  <a className="eco-card__dom" href={sitePath('/contacto')}>
                       brief →
                     </a>
                     <span className="eco-card__stat">2026</span>
@@ -181,7 +182,7 @@ export default function ProyectosPage() {
                 </p>
               </div>
               <div className="close-cta__ctas">
-                <a className="btn btn--accent" href="/contacto">
+                <a className="btn btn--accent" href={sitePath('/contacto')}>
                   Contacto <span className="arr">→</span>
                 </a>
               </div>
